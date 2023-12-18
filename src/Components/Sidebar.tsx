@@ -3,6 +3,7 @@ import { FaHome } from "react-icons/fa";
 import { IoIosChatboxes } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { FaTasks } from "react-icons/fa";
+import { FaShoppingBag } from "react-icons/fa";
 import { FaFile } from "react-icons/fa";
 import { MdContacts } from "react-icons/md";
 import { FaCalendar } from "react-icons/fa";
@@ -26,6 +27,10 @@ const Sidebar: React.FC = () => {
         <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
           <FaHome className="text-4xl" />
           <Link to="/"> صفحه اصلی</Link>
+        </li>
+        <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
+          <FaShoppingBag className="text-4xl" />
+          <Link to="/products">محصولات</Link>
         </li>
         <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
           <MdEmail className="text-4xl" />

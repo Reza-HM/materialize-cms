@@ -1,6 +1,6 @@
-const Index = () => {
-  return (
-    <div>Index</div>
-  )
-}
-export default Index
+import React from "react";
+
+const Index: React.FC = () => {
+  return <div></div>;
+};
+export default Index;

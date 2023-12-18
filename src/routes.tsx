@@ -11,6 +11,7 @@ import Files from "./Pages/Files";
 import Support from "./Pages/Support";
 import Tasks from "./Pages/Tasks";
 import Users from "./Pages/Users";
+import Products from "./Pages/Products";
 
 interface Route {
   path: string;
@@ -19,6 +20,7 @@ interface Route {
 
 const routes: Route[] = [
   { path: "/", element: <Index /> },
+  { path: "/products", element: <Products /> },
   { path: "/emails", element: <Emails /> },
   { path: "/chat", element: <Chat /> },
   { path: "/tasks", element: <Tasks /> },
