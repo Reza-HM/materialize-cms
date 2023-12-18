@@ -13,8 +13,9 @@ import { BsFillQuestionSquareFill } from "react-icons/bs";
 import { MdSupportAgent } from "react-icons/md";
 import { MdContactSupport } from "react-icons/md";
 import { IoLogOut } from "react-icons/io5";
+import React from "react";
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
   return (
     <div className="flex-1 bg-[#2c323f] text-white sticky min-h-screen p-8 shadow-md">
       <div className="flex items-center gap-4 border-b pb-4 border-slate-500">

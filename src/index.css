@@ -27,6 +27,7 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   user-select: none;
+  background-color: #f9f9f9;
 }
 
 *,
