@@ -1,3 +1,4 @@
+import React from "react";
 import Index from "./Pages/Index";
 import Bills from "./Pages/Bills";
 import Blog from "./Pages/Blog";
@@ -11,7 +12,12 @@ import Support from "./Pages/Support";
 import Tasks from "./Pages/Tasks";
 import Users from "./Pages/Users";
 
-const routes = [
+interface Route {
+  path: string;
+  element: React.ReactElement;
+}
+
+const routes: Route[] = [
   { path: "/", element: <Index /> },
   { path: "/emails", element: <Emails /> },
   { path: "/chat", element: <Chat /> },

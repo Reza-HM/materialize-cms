@@ -1,9 +1,10 @@
-import { useRoutes } from "react-router-dom";
+import React from "react";
+import { useRoutes, RouteObject } from "react-router-dom";
 import Sidebar from "./Components/Sidebar";
 import routes from "./routes";
 
-const App = () => {
-  const router = useRoutes(routes);
+const App: React.FC = () => {
+  const router = useRoutes(routes as RouteObject[]);
 
   return (
     <div className="flex">
@@ -12,4 +13,5 @@ const App = () => {
     </div>
   );
 };
+
 export default App;
