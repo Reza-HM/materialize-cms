@@ -36,7 +36,7 @@ const RevenueChart: React.FC = () => {
   const yAxisTicks = [100, 80, 60, 40, 20, 0]; // Desired Y-axis tick values
 
   return (
-    <div className="flex-[2] animate-fade-up bg-white shadow-lg rounded-lg mt-20">
+    <div className="flex-[2] animate-fade-up bg-white shadow-lg rounded-lg">
       <div className="p-6 rounded-md">
         <div className="flex justify-between items-center">
           <h4 className="flex items-center gap-8 mt-0">
@@ -46,7 +46,7 @@ const RevenueChart: React.FC = () => {
             </span>
           </h4>
           <button
-            className="py-2 px-4 text-white rounded-lg"
+            className="py-2 px-8 text-white rounded-lg"
             style={{ background: "linear-gradient(-45deg, #8e24aa, #ff6e40)" }}
           >
             جزئیات

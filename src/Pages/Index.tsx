@@ -4,6 +4,8 @@ import { FaChartLine } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
 import RevenueChart from "../Components/RevenueChart";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { FaArrowUp } from "react-icons/fa";
 
 const Index: React.FC = () => {
   return (
@@ -90,9 +92,33 @@ const Index: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-8">
+      <div className="flex gap-8 mt-20">
         <RevenueChart />
-        <div className="flex-1"></div>
+        <div className="flex-1 bg-white rounded-md shadow-lg animate-fade-up p-6">
+          <div className="flex justify-between items-center">
+            <div className="space-y-2">
+              <h3 className="text-3xl font-bold">درآمد</h3>
+              <p className="text-lg text-slate-400">15 دوشنبه - 21 یکشنبه</p>
+            </div>
+            <BsThreeDotsVertical />
+          </div>
+          <div className="flex items-center gap-8 justify-start mt-24 mr-4">
+            <h1 className="text-7xl">۸۹۹۰ تومان</h1>
+            <FaArrowUp className="text-4xl text-orange-500" />
+          </div>
+          <img src="/img/download.png" className="block mt-12" alt="" />
+          <div className="flex flex-col justify-center text-center mt-8">
+            <h3 className="text-2xl text-slate-600">کل درآمد هفتگی</h3>
+            <button
+              className="py-2 px-8 text-white rounded-lg w-60 self-center mt-4"
+              style={{
+                background: "linear-gradient(-45deg, #8e24aa, #ff6e40)",
+              }}
+            >
+              مشاهده
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
