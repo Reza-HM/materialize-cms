@@ -10,7 +10,7 @@ import { FaArrowUp } from "react-icons/fa";
 const Index: React.FC = () => {
   return (
     <div className="p-8">
-      <div className="flex justify-between items-center text-white gap-16 animate-fade-down">
+      <div className="flex justify-between items-center text-white gap-16 animate-fade-up">
         <div
           className="p-8 rounded-md flex justify-between items-center gap-8 flex-1"
           style={{
@@ -120,7 +120,7 @@ const Index: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-8 mt-20">
+      <div className="flex gap-8 mt-20 animate-fade-up">
         <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="p-8 flex justify-between items-start">
             <button
@@ -174,6 +174,70 @@ const Index: React.FC = () => {
             </div>
           </div>
           <img src="/img/shape3.png" alt="" />
+        </div>
+      </div>
+      <div className="flex gap-8 mt-20 animate-fade-up">
+        <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center">
+          <h2 className="text-4xl font-bold">ساعت اپل</h2>
+          <img src="/img/watch.png" alt="" />
+          <div className="">
+            <h4 className="text-slate-500 text-2xl">ساعت اپل</h4>
+            <p className="text-2xl text-slate-400 mt-4">
+              یک روز فقط فروش اختصاصی در بازار ما
+            </p>
+          </div>
+
+          <button
+            style={{
+              background: "linear-gradient(-45deg, #0288d1, #26c6da)",
+            }}
+            className="py-2 px-8 rounded-md text-white shadow-lg"
+          >
+            999 تومان
+          </button>
+        </div>
+        <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center">
+          <h2 className="text-4xl font-bold">آهنگ</h2>
+          <img src="/img/headphone.png" className="my-8" alt="" />
+          <div className="">
+            <h4 className="text-slate-500 text-2xl">کیفیت پیش فرض</h4>
+            <div className="flex items-center gap-8 mt-4">
+              <h4 className="text-2xl text-slate-600 py-2 px-4 bg-slate-200 rounded-3xl">
+                192kb
+              </h4>
+              <p className="text-2xl text-slate-600 py-2 px-4 bg-slate-200 rounded-3xl">
+                320kb
+              </p>
+            </div>
+          </div>
+
+          <button
+            style={{
+              background: "linear-gradient(-45deg, #ff5252, #f48fb1)",
+            }}
+            className="py-2 px-8 rounded-md text-white shadow-lg"
+          >
+            399 تومان
+          </button>
+        </div>
+        <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center">
+          <h2 className="text-4xl font-bold">آیفون</h2>
+          <img src="/img/phone.png" alt="" />
+          <div className="">
+            <h4 className="text-slate-500 text-2xl">گوشی اپل X</h4>
+            <p className="text-2xl text-slate-400 mt-4">
+              یک روز فقط فروش اختصاصی در بازار ما
+            </p>
+          </div>
+
+          <button
+            style={{
+              background: "linear-gradient(-45deg, #ff6f00, #ffca28)",
+            }}
+            className="py-2 px-8 rounded-md text-white shadow-lg"
+          >
+            299 تومان
+          </button>
         </div>
       </div>
     </div>
