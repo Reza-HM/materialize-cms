@@ -120,6 +120,62 @@ const Index: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className="flex gap-8 mt-20">
+        <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden">
+          <div className="p-8 flex justify-between items-start">
+            <button
+              className="py-2 px-8 text-white rounded-lg"
+              style={{
+                background: "linear-gradient(-45deg, #0288d1, #26c6da)",
+              }}
+            >
+              + 42.6% جدید
+            </button>
+            <div className="">
+              <h3 className="text-slate-400 text-xl">کاربران آنلاین</h3>{" "}
+              <p className="text-slate-400 text-xl">360 میانگین</p>{" "}
+              <h2 className="text-3xl mt-4 font-bold">3,450</h2>
+            </div>
+          </div>
+          <img src="/img/shape1.png" alt="" />
+        </div>
+        <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden">
+          <div className="p-8 flex justify-between items-start">
+            <button
+              className="py-2 px-8 text-white rounded-lg"
+              style={{
+                background: "linear-gradient(-45deg, #8e24aa, #ff6e40)",
+              }}
+            >
+              + 12% جدید
+            </button>
+            <div className="">
+              <h3 className="text-slate-400 text-xl">بارگذاری سرور فعلی</h3>{" "}
+              <p className="text-slate-400 text-xl">23.1% میانگین</p>{" "}
+              <h2 className="text-3xl mt-4 font-bold"> +2500</h2>
+            </div>
+          </div>
+          <img src="/img/shape2.png" alt="" />
+        </div>
+        <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden">
+          <div className="p-8 flex justify-between items-start">
+            <button
+              className="py-2 px-8 text-white rounded-lg"
+              style={{
+                background: "linear-gradient(-45deg, #ff6f00, #ffca28)",
+              }}
+            >
+              +900 تومان جدید
+            </button>
+            <div className="">
+              <h3 className="text-slate-400 text-xl"> درآمد امروز </h3>{" "}
+              <p className="text-slate-400 text-xl">40,512 تومان میانگین</p>{" "}
+              <h2 className="text-3xl mt-4 font-bold">22300 تومان</h2>
+            </div>
+          </div>
+          <img src="/img/shape3.png" alt="" />
+        </div>
+      </div>
     </div>
   );
 };
