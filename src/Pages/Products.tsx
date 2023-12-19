@@ -1,4 +1,8 @@
 const Products = () => {
-  return <div>Products</div>;
+  return (
+    <div>
+      <div className="">S</div>
+    </div>
+  );
 };
 export default Products;
