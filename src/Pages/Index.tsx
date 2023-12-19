@@ -92,9 +92,9 @@ const Index: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-8 mt-20">
+      <div className="flex gap-8 mt-20  animate-fade-up">
         <RevenueChart />
-        <div className="flex-1 bg-white rounded-md shadow-lg animate-fade-up p-6">
+        <div className="flex-1 bg-white rounded-md shadow-lg p-6">
           <div className="flex justify-between items-center">
             <div className="space-y-2">
               <h3 className="text-3xl font-bold">درآمد</h3>
@@ -238,6 +238,48 @@ const Index: React.FC = () => {
           >
             299 تومان
           </button>
+        </div>
+      </div>
+      <div className="flex gap-8 mt-20 animate-fade-up">
+        <div
+          className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
+          style={{
+            background: "linear-gradient(-45deg, #0288d1, #26c6da)",
+          }}
+        >
+          <img src="/img/apple-watch.png" className="w-40 h-40" alt="" />
+          <h2 className="text-3xl font-bold">50% تخفیف</h2>
+          <p>در ساعت اپل</p>
+        </div>
+        <div
+          className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
+          style={{
+            background: "linear-gradient(-45deg, #ff5252, #f48fb1)",
+          }}
+        >
+          <img src="/img/printer.png" className="w-40 h-40" alt="" />
+          <h2 className="text-3xl font-bold">20% تخفیف</h2>
+          <p>در چاپگر کانن</p>
+        </div>
+        <div
+          className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
+          style={{
+            background: "linear-gradient(-45deg, #ff6f00, #ffca28)",
+          }}
+        >
+          <img src="/img/laptop.png" className="w-40 h-40" alt="" />
+          <h2 className="text-3xl font-bold">40% تخفیف</h2>
+          <p>در مک بوک اپل</p>
+        </div>
+        <div
+          className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
+          style={{
+            background: "linear-gradient(-45deg, #43a047, #1de9b6)",
+          }}
+        >
+          <img src="/img/bowling.png" className="w-40 h-40" alt="" />
+          <h2 className="text-3xl font-bold">60% تخفیف</h2>
+          <p>در هر بازی</p>
         </div>
       </div>
     </div>

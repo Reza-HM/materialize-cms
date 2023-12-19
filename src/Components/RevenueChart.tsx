@@ -36,7 +36,7 @@ const RevenueChart: React.FC = () => {
   const yAxisTicks = [100, 80, 60, 40, 20, 0]; // Desired Y-axis tick values
 
   return (
-    <div className="flex-[2] animate-fade-up bg-white shadow-lg rounded-lg">
+    <div className="flex-[2] bg-white shadow-lg rounded-lg">
       <div className="p-6 rounded-md">
         <div className="flex justify-between items-center">
           <h4 className="flex items-center gap-8 mt-0">
