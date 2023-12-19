@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 
 const Header: React.FC = () => {
   return (
-    <div className="flex justify-between items-center gap-32 bg-white shadow-xl p-6 fixed w-full">
+    <div className="flex justify-between items-center gap-32 bg-white shadow-xl py-4 px-8 sticky top-0 left-0 right-0 z-50 w-full">
       <div className="bg-slate-100 flex-[2] relative">
         <FaSearch className="absolute right-6 top-6 text-slate-600 " />
         <input
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
           placeholder="کاوش در متریالایز..."
         />
       </div>
-      <div className="flex-1 flex items-center gap-16">
+      <div className="flex-1 flex justify-evenly items-center">
         <img src="/img/gb.svg" className="w-10 h-10" alt="" />
         <div className="relative">
           <span className="absolute w-8 h-8 flex justify-center items-center -right-4 -top-4 text-white bg-blue-500 shadow-lg shadow-blue-500 rounded-[50%]">
