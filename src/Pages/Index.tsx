@@ -3,11 +3,12 @@ import { FaDollarSign } from "react-icons/fa";
 import { FaChartLine } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
+import RevenueChart from "../Components/RevenueChart";
 
 const Index: React.FC = () => {
   return (
     <div className="p-8">
-      <div className="flex justify-between items-center text-white gap-16">
+      <div className="flex justify-between items-center text-white gap-16 animate-fade-down">
         <div
           className="p-8 rounded-md flex justify-between items-center gap-8 flex-1"
           style={{
@@ -49,7 +50,7 @@ const Index: React.FC = () => {
           </div>
         </div>
         <div
-          className="p-8 rounded-md flex justify-between items-center gap-8 flex-1"
+          className="p-8 rounded-md flex justify-between items-center gap-8 flex-1 "
           style={{
             background: "linear-gradient(-45deg, #ff6f00, #ffca28)",
           }}
@@ -69,7 +70,7 @@ const Index: React.FC = () => {
           </div>
         </div>
         <div
-          className="p-8 rounded-md flex justify-between items-center gap-8 flex-1"
+          className="p-8 rounded-md flex justify-between items-center gap-8 flex-1 "
           style={{
             background: "linear-gradient(-45deg, #43a047, #1de9b6)",
           }}
@@ -88,6 +89,10 @@ const Index: React.FC = () => {
             <p>25,000 تومان</p>
           </div>
         </div>
+      </div>
+      <div className="flex items-center gap-8">
+        <RevenueChart />
+        <div className="flex-1"></div>
       </div>
     </div>
   );
