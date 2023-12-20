@@ -60,5 +60,35 @@ a {
   background-color: #2d3748;
 }
 
-/* Range Slider  */
+/* animations */
 
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Define utility classes to apply the animations */
+.animated-fade-right {
+  animation: fade-right 1.5s ease-in;
+}
+
+.animated-fade-left {
+  animation: fade-left 1.5s ease-in;
+}

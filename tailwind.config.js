@@ -27,24 +27,27 @@ export default {
       },
       keyframes: {
         // Define custom keyframes for AOS-like animations
-        "fade-up": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(20px)",
+        keyframes: {
+          // Define custom keyframes for AOS-like animations
+          "fade-up": {
+            "0%": {
+              opacity: "0",
+              transform: "translateY(20px)",
+            },
+            "100%": {
+              opacity: "1",
+              transform: "translateY(0)",
+            },
           },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
-        },
-        "fade-down": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(-20px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)",
+          "fade-down": {
+            "0%": {
+              opacity: "0",
+              transform: "translateY(-20px)",
+            },
+            "100%": {
+              opacity: "1",
+              transform: "translateY(0)",
+            },
           },
           "fade-right": {
             "0%": {
@@ -74,7 +77,7 @@ export default {
         "fade-up": "fade-up 1.5s ease-out",
         "fade-down": "fade-down 1.5s ease-out",
         "fade-right": "fade-right 1.5s ease-out",
-        "fade-left": "fade-left 1.5s ease-out",
+        "fade-left": "fade-left 1.5s ease-in",
         // Add more animation classes for other animations as needed
       },
     },
