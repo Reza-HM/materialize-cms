@@ -22,7 +22,7 @@ const Products: FC = () => {
             <ProductBox />
             <ProductBox />
           </div>
-          <div className="relative flex gap-8 bg-white text-slate-400 p-8 rounded-lg shadow-lg overflow-hidden mt-12">
+          <div className="relative flex gap-8 bg-white text-slate-400 p-8 rounded-lg shadow-lg overflow-hidden mt-12 animate-fade-up">
             <div
               className="absolute top-4 left-[-10rem] text-white text-xl flex justify-center items-center text-center w-[25rem] h-[2em] -rotate-45"
               style={{

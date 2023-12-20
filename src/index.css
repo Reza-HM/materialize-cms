@@ -84,11 +84,41 @@ a {
   }
 }
 
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Define utility classes to apply the animations */
-.animated-fade-right {
+.animate-fade-right {
   animation: fade-right 1.5s ease-in;
 }
 
-.animated-fade-left {
+.animate-fade-left {
   animation: fade-left 1.5s ease-in;
+}
+
+.animate-fade-up {
+  animation: fade-up 1.5s ease-in;
+}
+
+.animate-fade-down {
+  animation: fade-down 1.5s ease-in;
 }
