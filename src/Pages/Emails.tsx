@@ -1,6 +1,10 @@
+import BreadCrumb from "../Components/BreadCrumb";
+
 const Emails = () => {
   return (
-    <div>Emails</div>
-  )
-}
-export default Emails
+    <div>
+      <BreadCrumb title="ایمیل‌ها" />
+    </div>
+  );
+};
+export default Emails;
