@@ -3,16 +3,14 @@ import { FaSearch } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaBookmark } from "react-icons/fa";
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
-import { FaRegStar } from "react-icons/fa";
 import { FaFolder } from "react-icons/fa";
 import { FaTrashAlt } from "react-icons/fa";
 import { IoMdRefresh } from "react-icons/io";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { IoSend } from "react-icons/io5";
-import { IoMdPaper } from "react-icons/io";
 import Email from "../Components/Email";
 import { FC } from "react";
+import EmailsSidebar from "../Components/EmailsSidebar";
 
 const Emails: FC = () => {
   return (
@@ -43,36 +41,7 @@ const Emails: FC = () => {
         </div>
       </div>
       <div className="flex justify-between gap-8 bg-gray-200/30 p-8">
-        <div className="flex-1 animate-fade-left">
-          <h2 className="text-3xl font-bold">پوشه ها</h2>
-          <ul className="mt-12 flex flex-col gap-8">
-            <li className="flex items-center gap-4 text-2xl text-slate-500">
-              <MdEmail />
-              صندوق ورودی
-            </li>
-            <li className="flex items-center gap-4 text-2xl text-slate-500">
-              <IoSend />
-              ارسال شده
-            </li>
-            <li className="flex items-center gap-4 text-2xl text-slate-500">
-              <IoMdPaper />
-              پیش نویس
-            </li>
-            <li className="flex items-center gap-4 text-2xl text-slate-500">
-              <RiErrorWarningLine />
-              طول
-            </li>
-            <li className="flex items-center gap-4 text-2xl text-slate-500">
-              <FaTrashAlt />
-              زباله ها
-            </li>
-          </ul>
-          <h2 className="text-3xl font-bold mt-12">فیلترها</h2>
-          <p className="flex items-center gap-4 mt-8 text-slate-500 text-2xl">
-            <FaRegStar />
-            ستاره دار
-          </p>
-        </div>
+        <EmailsSidebar />
         <div className="flex-[3] bg-white shadow-lg rounded-lg -translate-y-32 h-[440px] overflow-y-scroll">
           <div className="flex justify-between items-center p-8">
             <div className="flex items-center gap-8 text-3xl font-bold text-slate-500">

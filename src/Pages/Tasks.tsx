@@ -1,21 +1,12 @@
 import { FaSearch, FaTrash } from "react-icons/fa";
 // import BreadCrumb from "../Components/BreadCrumb";
 import { IoIosCheckbox } from "react-icons/io";
-import { FaBookmark } from "react-icons/fa";
-import { MdCheckBoxOutlineBlank, MdEmail } from "react-icons/md";
-import { FaRegStar } from "react-icons/fa";
-import { FaFolder } from "react-icons/fa";
-import { FaTrashAlt } from "react-icons/fa";
-import { IoMdRefresh } from "react-icons/io";
-import { RiErrorWarningLine } from "react-icons/ri";
+import { MdCheckBoxOutlineBlank } from "react-icons/md";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import Email from "../Components/Email";
 import { FC } from "react";
-import { FaClock } from "react-icons/fa";
-import { FaCalendar } from "react-icons/fa";
-import { FaCheck } from "react-icons/fa";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import Task from "../Components/Task";
+import TasksSidebar from "../Components/TasksSidebar";
 
 const Tasks: FC = () => {
   return (
@@ -46,39 +37,7 @@ const Tasks: FC = () => {
         </div>
       </div>
       <div className="flex justify-between gap-8 bg-gray-200/30 p-8">
-        <div className="flex-1 animate-fade-left">
-          <div className="flex items-center gap-4 text-2xl text-slate-500">
-            <MdEmail />
-            همه
-          </div>
-          <h2 className="mt-10 text-3xl font-bold">فیلتر ها</h2>
-          <ul className="mt-8 flex flex-col gap-8">
-            <li className="flex items-center gap-4 text-2xl text-slate-500">
-              <FaRegStar />
-              ستاره دار{" "}
-            </li>
-            <li className="flex items-center gap-4 text-2xl text-slate-500">
-              <RiErrorWarningLine />
-              اولویت
-            </li>
-            <li className="flex items-center gap-4 text-2xl text-slate-500">
-              <FaClock />
-              برنامه ریزی شده{" "}
-            </li>
-            <li className="flex items-center gap-4 text-2xl text-slate-500">
-              <FaCalendar />
-              امروز{" "}
-            </li>
-            <li className="flex items-center gap-4 text-2xl text-slate-500">
-              <FaCheck />
-              انجام شده{" "}
-            </li>
-            <li className="flex items-center gap-4 text-2xl text-slate-500">
-              <FaTrash />
-              حذف{" "}
-            </li>
-          </ul>
-        </div>
+        <TasksSidebar />
         <div className="flex-[4] bg-white shadow-lg rounded-lg -translate-y-32 h-[440px] overflow-y-scroll">
           <div className="flex justify-between items-center p-8">
             <MdCheckBoxOutlineBlank className="text-3xl font-bold text-slate-500" />
