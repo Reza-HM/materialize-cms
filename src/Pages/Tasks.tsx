@@ -14,6 +14,8 @@ import { FC } from "react";
 import { FaClock } from "react-icons/fa";
 import { FaCalendar } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
+import { HiBars3BottomLeft } from "react-icons/hi2";
+import Task from "../Components/Task";
 
 const Tasks: FC = () => {
   return (
@@ -77,29 +79,28 @@ const Tasks: FC = () => {
             </li>
           </ul>
         </div>
-        <div className="flex-[3] bg-white shadow-lg rounded-lg -translate-y-32 h-[440px] overflow-y-scroll">
+        <div className="flex-[4] bg-white shadow-lg rounded-lg -translate-y-32 h-[440px] overflow-y-scroll">
           <div className="flex justify-between items-center p-8">
+            <MdCheckBoxOutlineBlank className="text-3xl font-bold text-slate-500" />
             <div className="flex items-center gap-8 text-3xl font-bold text-slate-500">
-              <MdCheckBoxOutlineBlank />
-              <IoMdRefresh />
-              <FaBookmark />
-              <FaFolder />
-              <RiErrorWarningLine />
-              <FaTrashAlt />
+              <FaTrash />
+              <HiBars3BottomLeft />
+              <BsThreeDotsVertical />
             </div>
-            <BsThreeDotsVertical className="text-3xl font-bold text-slate-500" />
           </div>
-          <span className="block h-px w-full bg-slate-300 mt-8"></span>
+          <span className="block h-px w-full bg-slate-300 mt-4"></span>
           <div className="p-8 flex flex-col gap-8 overflow-scroll">
-            <Email />
-            <Email />
-            <Email />
-            <Email />
-            <Email />
-            <Email />
-            <Email />
-            <Email />
-            <Email />
+            <Task />
+            <Task />
+            <Task />
+            <Task />
+            <Task />
+            <Task />
+            <Task />
+            <Task />
+            <Task />
+            <Task />
+            <Task />
           </div>
         </div>
       </div>
