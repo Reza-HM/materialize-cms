@@ -6,7 +6,7 @@ import { MdOutlineAttachment } from "react-icons/md";
 
 const Email: FC = () => {
   return (
-    <div className="flex gap-8 border-b pb-8">
+    <div className="flex gap-8 border-b pb-8 animate-fade-up">
       <div className="flex-1 flex flex-col gap-8 text-3xl text-slate-500">
         <MdCheckBoxOutlineBlank />
         <FaRegStar />

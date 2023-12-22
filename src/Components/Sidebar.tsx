@@ -37,10 +37,6 @@ const Sidebar: React.FC = () => {
           <Link to="/emails">ایمیل‌ها</Link>
         </li>
         <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
-          <IoIosChatboxes className="text-4xl" />
-          <Link to="/chat">چت</Link>
-        </li>
-        <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
           <FaTasks className="text-4xl" />
           <Link to="/tasks">تسک‌ها</Link>
         </li>

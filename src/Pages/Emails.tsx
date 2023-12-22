@@ -1,5 +1,5 @@
 import { FaSearch } from "react-icons/fa";
-import BreadCrumb from "../Components/BreadCrumb";
+// import BreadCrumb from "../Components/BreadCrumb";
 import { MdEmail } from "react-icons/md";
 import { FaBookmark } from "react-icons/fa";
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
@@ -12,8 +12,9 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoSend } from "react-icons/io5";
 import { IoMdPaper } from "react-icons/io";
 import Email from "../Components/Email";
+import { FC } from "react";
 
-const Emails = () => {
+const Emails: FC = () => {
   return (
     <div className="">
       <div className="p-8 bg-gray-300/40">
@@ -31,7 +32,7 @@ const Emails = () => {
             />
           </div>
         </div>
-        <div className="flex items-center gap-12 mt-12">
+        <div className="flex items-center gap-12 mt-12 animate-fade-left">
           <img src="/img/2.jpg" className="w-20 h-20 rounded-[50%]" alt="" />
           <div className="flex flex-col">
             <p className="text-2xl font-bold text-slate-500">رضا حمزه ای</p>
@@ -42,32 +43,32 @@ const Emails = () => {
         </div>
       </div>
       <div className="flex justify-between gap-8 bg-gray-200/30 p-8">
-        <div className="flex-1">
+        <div className="flex-1 animate-fade-left">
           <h2 className="text-3xl font-bold">پوشه ها</h2>
           <ul className="mt-12 flex flex-col gap-8">
-            <li className="flex items-center gap-4 text-3xl text-slate-500">
+            <li className="flex items-center gap-4 text-2xl text-slate-500">
               <MdEmail />
               صندوق ورودی
             </li>
-            <li className="flex items-center gap-4 text-3xl text-slate-500">
+            <li className="flex items-center gap-4 text-2xl text-slate-500">
               <IoSend />
               ارسال شده
             </li>
-            <li className="flex items-center gap-4 text-3xl text-slate-500">
+            <li className="flex items-center gap-4 text-2xl text-slate-500">
               <IoMdPaper />
               پیش نویس
             </li>
-            <li className="flex items-center gap-4 text-3xl text-slate-500">
+            <li className="flex items-center gap-4 text-2xl text-slate-500">
               <RiErrorWarningLine />
               طول
             </li>
-            <li className="flex items-center gap-4 text-3xl text-slate-500">
+            <li className="flex items-center gap-4 text-2xl text-slate-500">
               <FaTrashAlt />
               زباله ها
             </li>
           </ul>
           <h2 className="text-3xl font-bold mt-12">فیلترها</h2>
-          <p className="flex items-center gap-4 mt-8 text-slate-500 text-3xl">
+          <p className="flex items-center gap-4 mt-8 text-slate-500 text-2xl">
             <FaRegStar />
             ستاره دار
           </p>
