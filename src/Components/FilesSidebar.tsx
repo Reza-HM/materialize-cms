@@ -5,10 +5,15 @@ import { BsFolder } from "react-icons/bs";
 import { FaClock, FaMusic, FaStar, FaTrash, FaVideo } from "react-icons/fa";
 import { IoDocument } from "react-icons/io5";
 import { MdMonitor, MdOutlinePhotoLibrary } from "react-icons/md";
+import { FaPlus } from "react-icons/fa";
 
 const FilesSidebar: FC = () => {
   return (
-    <div className="flex-1 animate-fade-left">
+    <div className="flex-1 p-8 animate-fade-left border-l">
+      <div className="py-4 px-8 bg-blue-600 text-white rounded-lg shadow-lg flex justify-center items-center gap-4 text-2xl font-bold cursor-pointer hover:bg-blue-700 transition-all duration-300">
+        <FaPlus />
+        افزودن فایل
+      </div>
       <h2 className="mt-10 text-xl text-slate-400 font-bold">برچسب‌ها</h2>
       <ul className="mt-8 flex flex-col gap-8">
         <li className="flex items-center gap-4 text-2xl text-slate-500">
