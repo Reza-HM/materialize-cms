@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-import { IoIosChatboxes } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { FaTasks } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
 import { FaFile } from "react-icons/fa";
 import { MdContacts } from "react-icons/md";
-import { FaCalendar } from "react-icons/fa";
 import { FaMoneyBills } from "react-icons/fa6";
 import { FaUsers } from "react-icons/fa6";
 import { MdArticle } from "react-icons/md";
@@ -48,10 +46,7 @@ const Sidebar: React.FC = () => {
           <MdContacts className="text-4xl" />
           <Link to="/contacts">مخاطبین</Link>
         </li>
-        <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
-          <FaCalendar className="text-4xl" />
-          <Link to="/calendar">تقویم</Link>
-        </li>
+
         <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
           <FaMoneyBills className="text-4xl" />
           <Link to="/bills">صورتحساب</Link>

@@ -122,3 +122,40 @@ a {
 .animate-fade-down {
   animation: fade-down 1.5s ease-in;
 }
+
+/* Wave Effect  */
+
+/* Basic styling */
+.wave-element {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Wave animation on hover */
+.wave-element::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Trigger the wave animation on hover */
+.wave-element:hover::after {
+  width: 0;
+  height: 0;
+  opacity: 1;
+}
