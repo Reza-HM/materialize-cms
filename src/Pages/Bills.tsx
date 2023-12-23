@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
-import { FaAngleDown, FaPlus } from "react-icons/fa";
-import { MdOutlinePictureAsPdf } from "react-icons/md";
+import { BiCheckbox } from "react-icons/bi";
+import { FaAngleDown, FaEye, FaPen, FaPlus } from "react-icons/fa";
+import { MdCheckBox, MdOutlinePictureAsPdf } from "react-icons/md";
 
 const Bills: FC = () => {
   const [isFilterMenuOpened, setIsFilterMenuOpened] = useState<boolean>(false);
@@ -44,12 +45,248 @@ const Bills: FC = () => {
             className="w-full bg-unset h-full text-slate-500"
           />
         </div>
-        <div className="flex-1 !rounded-full shadow-lg bg-blue-500 !flex items-center gap-4 p-4 text-white wave-element text-2xl">
+        <div className="flex-1 !rounded-full shadow-lg bg-blue-500 !flex justify-center items-center gap-4 p-4 text-white wave-element text-2xl">
           خروجی به PDF <MdOutlinePictureAsPdf />
         </div>
-        <div className="flex-1 !rounded-full shadow-lg bg-blue-500 !flex items-center gap-4 p-4 text-white wave-element text-2xl">
+        <div className="flex-1 !rounded-full shadow-lg bg-blue-500 !flex justify-center items-center gap-4 p-4 text-white wave-element text-2xl">
           ایجاد صورتحساب <FaPlus />
         </div>
+      </div>
+      <div className="mt-8 p-8 bg-white">
+        <table className=" w-full rounded-2xl overflow-hidden">
+          <thead className="">
+            <tr className="text-center text-slate-500">
+              <th className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </th>
+              <th className="p-8">صورتحساب#</th>
+              <th className="p-8">میزان</th>
+              <th className="p-8">تاریخ</th>
+              <th className="p-8">مشتری</th>
+              <th className="p-8">برچسب‌ها</th>
+              <th className="p-8">وضعیت</th>
+              <th className="p-8">عمل</th>
+            </tr>
+          </thead>
+          <tbody className="text-slate-500">
+            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+              <td className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </td>
+              <td className="p-5 text-blue-400">INV-00123</td>
+              <td className="p-5">$15,900</td>
+              <td className="p-5">23-07-19</td>
+              <td className="p-5">09103928383</td>
+              <td className=""> Toyota Motor</td>
+              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                پرداخت شده
+              </td>
+              <td className="p-5 flex justify-center items-center mt-2 gap-4">
+                {" "}
+                <FaEye className="text-3xl font-bold" />{" "}
+                <FaPen className="text-3xl font-bold" />
+              </td>
+            </tr>
+            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+              <td className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </td>
+              <td className="p-5 text-blue-400">INV-00123</td>
+              <td className="p-5">$15,900</td>
+              <td className="p-5">23-07-19</td>
+              <td className="p-5">09103928383</td>
+              <td className=""> Toyota Motor</td>
+              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                پرداخت شده
+              </td>
+              <td className="p-5 flex justify-center items-center mt-2 gap-4">
+                {" "}
+                <FaEye className="text-3xl font-bold" />{" "}
+                <FaPen className="text-3xl font-bold" />
+              </td>
+            </tr>
+            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+              <td className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </td>
+              <td className="p-5 text-blue-400">INV-00123</td>
+              <td className="p-5">$15,900</td>
+              <td className="p-5">23-07-19</td>
+              <td className="p-5">09103928383</td>
+              <td className=""> Toyota Motor</td>
+              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                پرداخت شده
+              </td>
+              <td className="p-5 flex justify-center items-center mt-2 gap-4">
+                {" "}
+                <FaEye className="text-3xl font-bold" />{" "}
+                <FaPen className="text-3xl font-bold" />
+              </td>
+            </tr>
+            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+              <td className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </td>
+              <td className="p-5 text-blue-400">INV-00123</td>
+              <td className="p-5">$15,900</td>
+              <td className="p-5">23-07-19</td>
+              <td className="p-5">09103928383</td>
+              <td className=""> Toyota Motor</td>
+              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                پرداخت شده
+              </td>
+              <td className="p-5 flex justify-center items-center mt-2 gap-4">
+                {" "}
+                <FaEye className="text-3xl font-bold" />{" "}
+                <FaPen className="text-3xl font-bold" />
+              </td>
+            </tr>
+            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+              <td className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </td>
+              <td className="p-5 text-blue-400">INV-00123</td>
+              <td className="p-5">$15,900</td>
+              <td className="p-5">23-07-19</td>
+              <td className="p-5">09103928383</td>
+              <td className=""> Toyota Motor</td>
+              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                پرداخت شده
+              </td>
+              <td className="p-5 flex justify-center items-center mt-2 gap-4">
+                {" "}
+                <FaEye className="text-3xl font-bold" />{" "}
+                <FaPen className="text-3xl font-bold" />
+              </td>
+            </tr>
+            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+              <td className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </td>
+              <td className="p-5 text-blue-400">INV-00123</td>
+              <td className="p-5">$15,900</td>
+              <td className="p-5">23-07-19</td>
+              <td className="p-5">09103928383</td>
+              <td className=""> Toyota Motor</td>
+              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                پرداخت شده
+              </td>
+              <td className="p-5 flex justify-center items-center mt-2 gap-4">
+                {" "}
+                <FaEye className="text-3xl font-bold" />{" "}
+                <FaPen className="text-3xl font-bold" />
+              </td>
+            </tr>
+            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+              <td className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </td>
+              <td className="p-5 text-blue-400">INV-00123</td>
+              <td className="p-5">$15,900</td>
+              <td className="p-5">23-07-19</td>
+              <td className="p-5">09103928383</td>
+              <td className=""> Toyota Motor</td>
+              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                پرداخت شده
+              </td>
+              <td className="p-5 flex justify-center items-center mt-2 gap-4">
+                {" "}
+                <FaEye className="text-3xl font-bold" />{" "}
+                <FaPen className="text-3xl font-bold" />
+              </td>
+            </tr>
+            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+              <td className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </td>
+              <td className="p-5 text-blue-400">INV-00123</td>
+              <td className="p-5">$15,900</td>
+              <td className="p-5">23-07-19</td>
+              <td className="p-5">09103928383</td>
+              <td className=""> Toyota Motor</td>
+              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                پرداخت شده
+              </td>
+              <td className="p-5 flex justify-center items-center mt-2 gap-4">
+                {" "}
+                <FaEye className="text-3xl font-bold" />{" "}
+                <FaPen className="text-3xl font-bold" />
+              </td>
+            </tr>
+            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+              <td className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </td>
+              <td className="p-5 text-blue-400">INV-00123</td>
+              <td className="p-5">$15,900</td>
+              <td className="p-5">23-07-19</td>
+              <td className="p-5">09103928383</td>
+              <td className=""> Toyota Motor</td>
+              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                پرداخت شده
+              </td>
+              <td className="p-5 flex justify-center items-center mt-2 gap-4">
+                {" "}
+                <FaEye className="text-3xl font-bold" />{" "}
+                <FaPen className="text-3xl font-bold" />
+              </td>
+            </tr>
+            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+              <td className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </td>
+              <td className="p-5 text-blue-400">INV-00123</td>
+              <td className="p-5">$15,900</td>
+              <td className="p-5">23-07-19</td>
+              <td className="p-5">09103928383</td>
+              <td className=""> Toyota Motor</td>
+              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                پرداخت شده
+              </td>
+              <td className="p-5 flex justify-center items-center mt-2 gap-4">
+                {" "}
+                <FaEye className="text-3xl font-bold" />{" "}
+                <FaPen className="text-3xl font-bold" />
+              </td>
+            </tr>
+            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+              <td className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </td>
+              <td className="p-5 text-blue-400">INV-00123</td>
+              <td className="p-5">$15,900</td>
+              <td className="p-5">23-07-19</td>
+              <td className="p-5">09103928383</td>
+              <td className=""> Toyota Motor</td>
+              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                پرداخت شده
+              </td>
+              <td className="p-5 flex justify-center items-center mt-2 gap-4">
+                {" "}
+                <FaEye className="text-3xl font-bold" />{" "}
+                <FaPen className="text-3xl font-bold" />
+              </td>
+            </tr>
+            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+              <td className="p-5">
+                <BiCheckbox className="text-4xl" />
+              </td>
+              <td className="p-5 text-blue-400">INV-00123</td>
+              <td className="p-5">$15,900</td>
+              <td className="p-5">23-07-19</td>
+              <td className="p-5">09103928383</td>
+              <td className=""> Toyota Motor</td>
+              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                پرداخت شده
+              </td>
+              <td className="p-5 flex justify-center items-center mt-2 gap-4">
+                {" "}
+                <FaEye className="text-3xl font-bold" />{" "}
+                <FaPen className="text-3xl font-bold" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );
