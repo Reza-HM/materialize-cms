@@ -1,11 +1,9 @@
 import { FaSearch, FaTrash, FaUser } from "react-icons/fa";
 // import BreadCrumb from "../Components/BreadCrumb";
-import { MdCheckBoxOutlineBlank } from "react-icons/md";
-import { BsThreeDotsVertical } from "react-icons/bs";
 import { FC } from "react";
-import { HiBars3BottomLeft } from "react-icons/hi2";
-import Task from "../Components/Task";
 import ContactsSidebar from "../Components/ContactsSidebar";
+import Contact from "../Components/ContactsTable";
+import ContactsTable from "../Components/ContactsTable";
 
 const Contacts: FC = () => {
   return (
@@ -34,31 +32,10 @@ const Contacts: FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between gap-8 bg-gray-200/30 p-8 ">
+      <div className="flex justify-between gap-8 bg-gray-200/30 p-8">
         <ContactsSidebar />
         <div className="flex-[4] bg-white shadow-lg rounded-lg -translate-y-32 h-[440px] overflow-y-scroll">
-          <div className="flex justify-between items-center p-8">
-            <MdCheckBoxOutlineBlank className="text-3xl font-bold text-slate-500" />
-            <div className="flex items-center gap-8 text-3xl font-bold text-slate-500">
-              <FaTrash />
-              <HiBars3BottomLeft />
-              <BsThreeDotsVertical />
-            </div>
-          </div>
-          <span className="block h-px w-full bg-slate-300 mt-4"></span>
-          <div className="p-8 flex flex-col gap-8 overflow-scroll">
-            <Task />
-            <Task />
-            <Task />
-            <Task />
-            <Task />
-            <Task />
-            <Task />
-            <Task />
-            <Task />
-            <Task />
-            <Task />
-          </div>
+          <ContactsTable />
         </div>
       </div>
     </div>
