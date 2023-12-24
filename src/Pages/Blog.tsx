@@ -1,6 +1,7 @@
 import { FC } from "react";
 import BreadCrumb from "../Components/BreadCrumb";
 import ArticleBox from "../Components/ArticleBox";
+import BlogNews from "../Components/BlogNews";
 
 const Blog: FC = () => {
   return (
@@ -10,6 +11,9 @@ const Blog: FC = () => {
         <ArticleBox />
         <ArticleBox />
         <ArticleBox />
+        <BlogNews />
+        <BlogNews />
+        <BlogNews />
       </div>
     </div>
   );
