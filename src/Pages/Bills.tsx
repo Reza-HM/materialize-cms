@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { BiCheckbox } from "react-icons/bi";
 import { FaAngleDown, FaEye, FaPen, FaPlus } from "react-icons/fa";
-import { MdCheckBox, MdOutlinePictureAsPdf } from "react-icons/md";
+import { MdOutlinePictureAsPdf } from "react-icons/md";
 
 const Bills: FC = () => {
   const [isFilterMenuOpened, setIsFilterMenuOpened] = useState<boolean>(false);
