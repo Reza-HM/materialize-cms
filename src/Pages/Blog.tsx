@@ -4,6 +4,7 @@ import ArticleBox from "../Components/ArticleBox";
 import BlogNews from "../Components/BlogNews";
 import BlogTweet from "../Components/BlogTweet";
 import BiggerArticleBox from "../Components/BiggerArticleBox";
+import BlogGallery from "../Components/BlogGallery";
 
 const Blog: FC = () => {
   return (
@@ -23,6 +24,9 @@ const Blog: FC = () => {
           <BiggerArticleBox />
           <BiggerArticleBox />
         </div>
+        <BlogGallery />
+        <BlogGallery />
+        <BlogGallery />
       </div>
     </div>
   );
