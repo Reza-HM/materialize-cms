@@ -7,7 +7,6 @@ import { FaFile } from "react-icons/fa";
 import { MdContacts } from "react-icons/md";
 import { FaMoneyBills } from "react-icons/fa6";
 import { FaUsers } from "react-icons/fa6";
-import { MdArticle } from "react-icons/md";
 import { BsFillQuestionSquareFill } from "react-icons/bs";
 import { MdSupportAgent } from "react-icons/md";
 import { MdContactSupport } from "react-icons/md";
@@ -55,10 +54,7 @@ const Sidebar: React.FC = () => {
           <FaUsers className="text-4xl" />
           <Link to="/users">کاربران</Link>
         </li>
-        <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
-          <MdArticle className="text-4xl" />
-          <Link to="/blog">وبلاگ</Link>
-        </li>
+
         <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
           <BsFillQuestionSquareFill className="text-4xl" />
           <Link to="/questions">سوالات متداول</Link>
