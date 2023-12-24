@@ -13,7 +13,7 @@ const Users = () => {
 
   return (
     <div className="mt-12 p-8">
-      <div className="bg-white shadow-lg flex items-center gap-8 rounded-lg p-16">
+      <div className="bg-white shadow-lg flex items-center gap-8 rounded-lg p-16 animate-fade-up">
         <div
           className="flex-1 cursor-pointer relative"
           onClick={() => {
@@ -132,7 +132,7 @@ const Users = () => {
           نمایش
         </div>
       </div>
-      <div className="p-8 mt-8 bg-white shadow-lg rounded-lg">
+      <div className="p-8 mt-8 bg-white shadow-lg rounded-lg animate-fade-up">
         <div className="flex items-center justify-between my-8">
           <div className="flex items-center gap-4">
             <p className="text-slate-500">جستجو:</p>

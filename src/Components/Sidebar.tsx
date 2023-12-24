@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { MdArticle, MdEmail } from "react-icons/md";
 import { FaTasks } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
 import { FaFile } from "react-icons/fa";
@@ -8,7 +8,6 @@ import { MdContacts } from "react-icons/md";
 import { FaMoneyBills } from "react-icons/fa6";
 import { FaUsers } from "react-icons/fa6";
 import { BsFillQuestionSquareFill } from "react-icons/bs";
-import { MdSupportAgent } from "react-icons/md";
 import { MdContactSupport } from "react-icons/md";
 import { IoLogOut } from "react-icons/io5";
 import React from "react";
@@ -54,7 +53,10 @@ const Sidebar: React.FC = () => {
           <FaUsers className="text-4xl" />
           <Link to="/users">کاربران</Link>
         </li>
-
+        <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
+          <MdArticle className="text-4xl" />
+          <Link to="/blog">وبلاگ</Link>
+        </li>
         <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
           <BsFillQuestionSquareFill className="text-4xl" />
           <Link to="/questions">سوالات متداول</Link>
@@ -62,10 +64,6 @@ const Sidebar: React.FC = () => {
         <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
           <MdContactSupport className="text-4xl" />
           <Link to="/contact-us">تماس با ما</Link>
-        </li>
-        <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
-          <MdSupportAgent className="text-4xl" />
-          <Link to="/support">پشتیبانی</Link>
         </li>
         <li className="flex items-center gap-8 hover:pr-8 cursor-pointer transition-all duration-300 ease-in-out">
           <IoLogOut className="text-4xl" />

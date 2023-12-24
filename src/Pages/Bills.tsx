@@ -8,7 +8,7 @@ const Bills: FC = () => {
 
   return (
     <div className="m-12 p-8">
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 animate-fade-up">
         <div className="flex-[4] !rounded-full relative shadow-lg p-6 bg-white border border-zinc-700">
           <div
             className="!absolute !left-2 !top-2 !rounded-full !flex !items-center !gap-4 !p-4 !bg-purple-700 !text-white !cursor-pointer wave-element "
@@ -52,7 +52,7 @@ const Bills: FC = () => {
           ایجاد صورتحساب <FaPlus />
         </div>
       </div>
-      <div className="mt-8 p-8 bg-white">
+      <div className="mt-8 p-8 bg-white animate-fade-up">
         <table className=" w-full rounded-2xl overflow-hidden">
           <thead className="">
             <tr className="text-center text-slate-500">
@@ -77,7 +77,7 @@ const Bills: FC = () => {
               <td className="p-5">$15,900</td>
               <td className="p-5">23-07-19</td>
               <td className="p-5">09103928383</td>
-              <td className=""> Toyota Motor</td>
+              <td className="p-5"> Toyota Motor</td>
               <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
                 پرداخت شده
               </td>
