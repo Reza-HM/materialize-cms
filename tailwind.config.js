@@ -80,6 +80,7 @@ export default {
         "fade-left": "fade-left 1.5s ease-in",
         // Add more animation classes for other animations as needed
       },
+
     },
   },
   plugins: [],

@@ -4,7 +4,7 @@ import { BiLike, BiMessage } from "react-icons/bi";
 const BlogNews: FC = () => {
   return (
     <div
-      className="text-white rounded-lg shadow-lg p-12 flex flex-col gap-8"
+      className="text-white rounded-lg shadow-lg p-12 flex flex-col gap-8 animate-fade-up"
       style={{ background: "linear-gradient(-45deg, #3949ab, #4fc3f7)" }}
     >
       <h2 className="text-3xl font-bold">
