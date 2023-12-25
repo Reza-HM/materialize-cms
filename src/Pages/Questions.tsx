@@ -1,7 +1,9 @@
+import { FC } from "react";
 import { FaClipboard, FaSearch, FaUser } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
+import Accordion from "../Components/Accordion";
 
-const Questions = () => {
+const Questions: FC = () => {
   return (
     <div className="mt-8 p-8">
       <div className="bg-[url('/img/faq-search.jpg')] bg-cover bg-no-repeat p-24 rounded-lg shadow-lg flex flex-col items-center gap-8">
@@ -51,6 +53,69 @@ const Questions = () => {
               Lorem ipsum dolor sit amet.
             </p>
           </div>
+        </div>
+      </div>
+      <div className="mt-12 flex gap-8">
+        <div className="flex-1 flex flex-col gap-16 bg-white rounded-lg shadow-md shadow-zinc-400 p-8">
+          <div className="">
+            <h2 className="text-3xl text-slate-600 mb-8">دسته بندی</h2>
+            <ul className="flex flex-col gap-4 text-slate-500">
+              <li className="flex items-center gap-4">
+                <span className="bg-transparent border-2 border-yellow-500 rounded-[100%] w-8 h-8"></span>
+                برنامه های کاربردی
+              </li>
+              <li className="flex items-center gap-4">
+                <span className="bg-transparent border-2 border-blue-500 rounded-[100%] w-8 h-8"></span>
+                عناصر رابط کاربری
+              </li>
+              <li className="flex items-center gap-4">
+                <span className="bg-transparent border-2 border-purple-800 rounded-[100%] w-8 h-8"></span>
+                اجزا
+              </li>
+              <li className="flex items-center gap-4">
+                <span className="bg-transparent border-2 border-green-500 rounded-[100%] w-8 h-8"></span>
+                فرآیند ساخت
+              </li>
+            </ul>
+          </div>
+          <div className="">
+            <h2 className="text-3xl text-slate-600 mb-8">فعالان</h2>
+            <ul className="flex flex-col gap-4">
+              <li className="flex items-center gap-4">
+                <img src="/img/2.jpg" className="w-16 h-16" alt="" />
+                <div className="">
+                  <h4 className="text-blue-500">مایک</h4>
+                  <p className="text-slate-500">مایکروسافت</p>
+                </div>
+              </li>
+              <li className="flex items-center gap-4">
+                <img src="/img/2.jpg" className="w-16 h-16" alt="" />
+                <div className="">
+                  <h4 className="text-blue-500">مایک</h4>
+                  <p className="text-slate-500">مایکروسافت</p>
+                </div>
+              </li>
+              <li className="flex items-center gap-4">
+                <img src="/img/2.jpg" className="w-16 h-16" alt="" />
+                <div className="">
+                  <h4 className="text-blue-500">مایک</h4>
+                  <p className="text-slate-500">مایکروسافت</p>
+                </div>
+              </li>
+              <li className="flex items-center gap-4">
+                <img src="/img/2.jpg" className="w-16 h-16" alt="" />
+                <div className="">
+                  <h4 className="text-blue-500">مایک</h4>
+                  <p className="text-slate-500">مایکروسافت</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="flex-[4] flex flex-col gap-4">
+          <Accordion /> <Accordion />
+          <Accordion /> <Accordion />
+          <Accordion /> <Accordion />
         </div>
       </div>
     </div>
