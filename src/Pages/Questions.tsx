@@ -12,7 +12,13 @@ const Questions = () => {
           placeholder="شروع به تایپ جستجوی خود کنید..."
         />
       </div>
-      
+      <div className="flex items-center gap-8">
+        <div className="flex-1"></div>
+        <div className="flex-1"></div>
+        <div className="flex-1"></div>
+        <div className="flex-1"></div>
+        <div className="flex-1"></div>
+      </div>
     </div>
   );
 };
