@@ -6,7 +6,7 @@ import Accordion from "../Components/Accordion";
 const Questions: FC = () => {
   return (
     <div className="mt-8 p-8">
-      <div className="bg-[url('/img/faq-search.jpg')] bg-cover bg-no-repeat p-24 rounded-lg shadow-lg flex flex-col items-center gap-8">
+      <div className="bg-[url('/img/faq-search.jpg')] bg-cover bg-no-repeat p-24 rounded-lg shadow-lg flex flex-col items-center gap-8 animate-fade-up">
         <h2 className="text-zinc-700 text-4xl font-bold">سوالات متداول</h2>
         <p className="text-slate-500">
           برای پاسخ‌های سریع، مرکز راهنمایی ما را جستجو کنید
@@ -17,7 +17,7 @@ const Questions: FC = () => {
           placeholder="شروع به تایپ جستجوی خود کنید..."
         />
       </div>
-      <div className="flex items-center gap-8 mt-8">
+      <div className="flex items-center gap-8 mt-8 animate-fade-up">
         <div className="flex-1 flex flex-col items-center gap-8 bg-gray-200 rounded-lg shadow-lg p-12">
           <FaSearch className="text-7xl font-bold text-yellow-500" />
           <div className="flex flex-col gap-4 items-center mt-4">
@@ -56,7 +56,7 @@ const Questions: FC = () => {
         </div>
       </div>
       <div className="mt-12 flex gap-8">
-        <div className="flex-1 flex flex-col gap-16 bg-white rounded-lg shadow-md shadow-zinc-400 p-8">
+        <div className="flex-1 flex flex-col gap-16 bg-white rounded-lg shadow-md shadow-zinc-400 p-8 animate-fade-left">
           <div className="">
             <h2 className="text-3xl text-slate-600 mb-8">دسته بندی</h2>
             <ul className="flex flex-col gap-4 text-slate-500">
@@ -112,7 +112,7 @@ const Questions: FC = () => {
             </ul>
           </div>
         </div>
-        <div className="flex-[4] flex flex-col gap-4">
+        <div className="flex-[4] flex flex-col gap-4 animate-fade-right">
           <Accordion /> <Accordion />
           <Accordion /> <Accordion />
           <Accordion /> <Accordion />
