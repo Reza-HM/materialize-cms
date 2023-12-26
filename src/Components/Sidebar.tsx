@@ -14,7 +14,7 @@ import React from "react";
 
 const Sidebar: React.FC = () => {
   return (
-    <div className="flex-1 bg-[#2c323f] text-white sticky top-0 h-screen z-50 overflow-y-auto p-8 shadow-md">
+    <div className="hidden lg:block flex-1 bg-[#2c323f] text-white sticky top-0 h-screen z-50 overflow-y-auto p-8 shadow-md">
       <div className="flex items-center gap-4 border-b pb-4 border-slate-500">
         <img src="/img/materialize-logo.png" className="w-16" alt="cms logo" />
         <h1 className="text-4xl font-bold">متریالایز</h1>
