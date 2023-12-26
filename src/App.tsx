@@ -11,7 +11,7 @@ const App: React.FC = () => {
     <div className="flex">
       <Sidebar />
       <div className="flex-[6]">
-        <Header />
+        <Header />  
         {router}
       </div>
     </div>

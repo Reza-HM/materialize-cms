@@ -88,7 +88,7 @@ const Index: React.FC = () => {
               <h3 className="text-3xl font-bold">890</h3>
               <p>تومان امروز</p>
             </div>
-            <p>25,000 تومان</p>
+            <p className="truncate">25,000 تومان</p>
           </div>
         </div>
       </div>
