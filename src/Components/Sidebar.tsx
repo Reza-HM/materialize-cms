@@ -1,18 +1,28 @@
+import React, { FC } from "react";
 import { Link } from "react-router-dom";
-import { FaHome } from "react-icons/fa";
-import { MdArticle, MdEmail } from "react-icons/md";
-import { FaTasks } from "react-icons/fa";
-import { FaShoppingBag } from "react-icons/fa";
-import { FaFile } from "react-icons/fa";
-import { MdContacts } from "react-icons/md";
+import {
+  FaFile,
+  FaHome,
+  FaShoppingBag,
+  FaTasks,
+  FaUsers,
+} from "react-icons/fa";
+import {
+  MdArticle,
+  MdContactSupport,
+  MdContacts,
+  MdEmail,
+} from "react-icons/md";
 import { FaMoneyBills } from "react-icons/fa6";
-import { FaUsers } from "react-icons/fa6";
 import { BsFillQuestionSquareFill } from "react-icons/bs";
-import { MdContactSupport } from "react-icons/md";
 import { IoLogOut } from "react-icons/io5";
-import React from "react";
 
-const Sidebar: React.FC = ({ isOpened, setIsOpened }) => {
+interface SidebarProps {
+  isOpened?: boolean;
+  setIsOpened?: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Sidebar: FC<SidebarProps> = ({ isOpened, setIsOpened }) => {
   return (
     <>
       <div
@@ -84,9 +94,10 @@ const Sidebar: React.FC = ({ isOpened, setIsOpened }) => {
         className={`fixed z-40 top-0 right-0 left-0 hidden h-[120vh] opacity-0 bg-black/50 ${
           isOpened ? "!block !opacity-100" : ""
         }`}
-        onClick={() => setIsOpened(false)}
+        onClick={() => setIsOpened && setIsOpened(false)}
       ></div>
     </>
   );
 };
+
 export default Sidebar;
