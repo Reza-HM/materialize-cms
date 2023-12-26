@@ -12,13 +12,13 @@ import { MdContactSupport } from "react-icons/md";
 import { IoLogOut } from "react-icons/io5";
 import React from "react";
 
-const Sidebar: React.FC = ({ isOpened }) => {
+const Sidebar: React.FC = ({ isOpened, setIsOpened }) => {
   return (
     <>
       <div
         className={`${
           isOpened ? "!block" : "hidden"
-        } hidden lg:block animate-fade-left lg:animate-none w-[200px] flex-1 bg-[#2c323f] text-white sticky top-0 h-screen z-50 overflow-y-auto p-8 shadow-md`}
+        } hidden lg:block animate-fade-left lg:animate-none w-[200px] flex-1 bg-[#2c323f] text-white fixed lg:sticky top-0 h-screen z-50 overflow-y-auto p-8 shadow-md`}
       >
         <div className="flex items-center gap-4 border-b pb-4 border-slate-500">
           <img
@@ -84,6 +84,7 @@ const Sidebar: React.FC = ({ isOpened }) => {
         className={`fixed z-40 top-0 right-0 left-0 hidden h-[120vh] opacity-0 bg-black/50 ${
           isOpened ? "!block !opacity-100" : ""
         }`}
+        onClick={() => setIsOpened(false)}
       ></div>
     </>
   );

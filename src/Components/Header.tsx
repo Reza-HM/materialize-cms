@@ -44,7 +44,9 @@ const Header: React.FC = () => {
           <MdFormatIndentIncrease className="text-4xl" />
         </div>
       </div>
-      {isSidebarOpened && <Sidebar isOpened={isSidebarOpened} />}
+      {isSidebarOpened && (
+        <Sidebar isOpened={isSidebarOpened} setIsOpened={setIsSidebarOpened} />
+      )}
     </>
   );
 };
