@@ -10,7 +10,7 @@ import { FaArrowUp } from "react-icons/fa";
 const Index: React.FC = () => {
   return (
     <div className="p-8">
-      <div className="flex justify-between items-center text-white gap-16 animate-fade-up">
+      <div className="flex flex-wrap justify-between items-center text-white gap-16 animate-fade-up">
         <div
           className="p-8 rounded-md flex justify-between items-center gap-8 flex-1"
           style={{
@@ -92,7 +92,7 @@ const Index: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-8 mt-20  animate-fade-up">
+      <div className="flex flex-wrap gap-8 mt-20  animate-fade-up">
         <RevenueChart />
         <div className="flex-1 bg-white rounded-md shadow-lg p-6">
           <div className="flex justify-between items-center">
@@ -120,7 +120,7 @@ const Index: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-8 mt-20 animate-fade-up">
+      <div className="flex flex-wrap gap-8 mt-20 animate-fade-up">
         <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="p-8 flex justify-between items-start">
             <button
@@ -176,7 +176,7 @@ const Index: React.FC = () => {
           <img src="/img/shape3.png" alt="" />
         </div>
       </div>
-      <div className="flex gap-8 mt-20 animate-fade-up">
+      <div className="flex flex-wrap gap-8 mt-20 animate-fade-up">
         <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center">
           <h2 className="text-4xl font-bold">ساعت اپل</h2>
           <img src="/img/watch.png" alt="" />
@@ -240,7 +240,7 @@ const Index: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="flex gap-8 mt-20 animate-fade-up">
+      <div className="flex flex-wrap gap-8 mt-20 animate-fade-up">
         <div
           className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
           style={{
