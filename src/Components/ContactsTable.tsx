@@ -4,10 +4,10 @@ import { MdCheckBox } from "react-icons/md";
 
 const ContactsTable: FC = () => {
   return (
-    <div>
-      <table className=" w-full rounded-2xl overflow-hidden">
-        <thead className="">
-          <tr className="text-center text-slate-500">
+    <div className="max-w-[250px] md:max-w-none">
+      <table className="w-full rounded-2xl overflow-hidden">
+        <thead className="w-full">
+          <tr className="text-center text-slate-500 w-full">
             <th className="p-5">
               <MdCheckBox className="text-3xl" />
             </th>
@@ -19,13 +19,16 @@ const ContactsTable: FC = () => {
             <th className="p-8">حذف</th>
           </tr>
         </thead>
-        <tbody className="text-slate-500">
+        <tbody className="text-slate-500 w-full">
           <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
             <td className="p-5">
               <MdCheckBox className="text-3xl text-slate-500" />
             </td>
             <td className="p-5">
-              <img src="/img/2.jpg" className="w-16 h-16 rounded-[50%] mx-auto" />{" "}
+              <img
+                src="/img/2.jpg"
+                className="w-16 h-16 rounded-[50%] mx-auto"
+              />{" "}
             </td>
             <td className="p-5">رضا حمزه ای</td>
             <td className="p-5">RezaHM@gmail.com</td>
@@ -43,7 +46,10 @@ const ContactsTable: FC = () => {
               <MdCheckBox className="text-3xl " />
             </td>
             <td className="p-5">
-              <img src="/img/2.jpg" className="w-16 h-16 rounded-[50%] mx-auto" />{" "}
+              <img
+                src="/img/2.jpg"
+                className="w-16 h-16 rounded-[50%] mx-auto"
+              />{" "}
             </td>
             <td className="p-5">رضا حمزه ای</td>
             <td className="p-5">RezaHM@gmail.com</td>
@@ -61,7 +67,10 @@ const ContactsTable: FC = () => {
               <MdCheckBox className="text-3xl" />
             </td>
             <td className="p-5">
-              <img src="/img/2.jpg" className="w-16 h-16 rounded-[50%] mx-auto" />{" "}
+              <img
+                src="/img/2.jpg"
+                className="w-16 h-16 rounded-[50%] mx-auto"
+              />{" "}
             </td>
             <td className="p-5">رضا حمزه ای</td>
             <td className="p-5">RezaHM@gmail.com</td>
@@ -79,7 +88,10 @@ const ContactsTable: FC = () => {
               <MdCheckBox className="text-3xl" />
             </td>
             <td className="p-5">
-              <img src="/img/2.jpg" className="w-16 h-16 rounded-[50%] mx-auto" />{" "}
+              <img
+                src="/img/2.jpg"
+                className="w-16 h-16 rounded-[50%] mx-auto"
+              />{" "}
             </td>
             <td className="p-5">رضا حمزه ای</td>
             <td className="p-5">RezaHM@gmail.com</td>
@@ -97,7 +109,10 @@ const ContactsTable: FC = () => {
               <MdCheckBox className="text-3xl " />
             </td>
             <td className="p-5">
-              <img src="/img/2.jpg" className="w-16 h-16 rounded-[50%] mx-auto" />{" "}
+              <img
+                src="/img/2.jpg"
+                className="w-16 h-16 rounded-[50%] mx-auto"
+              />{" "}
             </td>
             <td className="p-5">رضا حمزه ای</td>
             <td className="p-5">RezaHM@gmail.com</td>
@@ -115,7 +130,10 @@ const ContactsTable: FC = () => {
               <MdCheckBox className="text-3xl " />
             </td>
             <td className="p-5">
-              <img src="/img/2.jpg" className="w-16 h-16 rounded-[50%] mx-auto" />{" "}
+              <img
+                src="/img/2.jpg"
+                className="w-16 h-16 rounded-[50%] mx-auto"
+              />{" "}
             </td>
             <td className="p-5">رضا حمزه ای</td>
             <td className="p-5">RezaHM@gmail.com</td>

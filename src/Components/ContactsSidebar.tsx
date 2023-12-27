@@ -5,7 +5,7 @@ import { BsPrinter } from "react-icons/bs";
 
 const ContactsSidebar: FC = () => {
   return (
-    <div className="flex-1 animate-fade-left h-[350px] overflow-y-scroll">
+    <div className="hidden md:block md:flex-1 animate-fade-left h-[350px] overflow-y-scroll">
       <h2 className="mt-10 text-3xl font-bold">فیلتر ها</h2>
       <ul className="mt-8 flex flex-col gap-8">
         <li className="flex items-center gap-4 text-2xl text-slate-500">

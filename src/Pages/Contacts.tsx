@@ -1,14 +1,13 @@
-import { FaSearch, FaTrash, FaUser } from "react-icons/fa";
+import { FaSearch, FaUser } from "react-icons/fa";
 // import BreadCrumb from "../Components/BreadCrumb";
 import { FC } from "react";
 import ContactsSidebar from "../Components/ContactsSidebar";
-import Contact from "../Components/ContactsTable";
 import ContactsTable from "../Components/ContactsTable";
 
 const Contacts: FC = () => {
   return (
     <div className="">
-      <div className="p-8 bg-gray-300/40">
+      <div className="p-8 bg-gray-300/40 hidden md:block">
         <div className="flex justify-between items-center mt-20">
           <div className="flex-1 flex items-center gap-4">
             <FaUser className="text-4xl font-bold" />
@@ -32,9 +31,21 @@ const Contacts: FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between gap-8 bg-gray-200/30 p-8">
+      <div className="flex flex-wrap justify-between gap-8 bg-gray-200/30 p-8">
         <ContactsSidebar />
-        <div className="flex-[4] bg-white shadow-lg rounded-lg -translate-y-32 h-[440px] overflow-y-scroll">
+
+        <div className="w-full flex md:hidden justify-between items-center mt-20">
+          <div className="flex-1 bg-slate-100 relative">
+            <FaSearch className="absolute right-6 top-6 text-slate-500" />
+            <input
+              type="text"
+              className="w-full bg-unset px-16 py-4 placeholder:text-slate-500 text-slate-500 rounded-xl shadow-md border focus:bg-white"
+              placeholder="جستجوی مخاطب..."
+            />
+          </div>
+        </div>
+
+        <div className="w-full md:flex-[4] bg-white shadow-lg rounded-lg md:-translate-y-32 md:h-[440px] overflow-y-scroll">
           <ContactsTable />
         </div>
       </div>
