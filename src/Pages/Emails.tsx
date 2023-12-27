@@ -54,7 +54,7 @@ const Emails: FC = () => {
           </div>
         </div>
 
-        <div className="w-full lg:flex-[3] bg-white shadow-lg rounded-lg lg:-translate-y-32 h-[440px] overflow-y-scroll">
+        <div className="w-full lg:flex-[3] bg-white shadow-lg rounded-lg lg:-translate-y-32 lg:h-[440px] overflow-y-scroll">
           <div className="flex justify-between items-center p-8">
             <div className="flex items-center gap-8 text-3xl font-bold text-slate-500">
               <MdCheckBoxOutlineBlank />
