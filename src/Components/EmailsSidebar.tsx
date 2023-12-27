@@ -7,7 +7,7 @@ import { RiErrorWarningLine } from "react-icons/ri";
 
 const EmailsSidebar: FC = () => {
   return (
-    <div className="flex-1 animate-fade-left">
+    <div className="lg:flex-1 hidden lg:block animate-fade-left">
       <h2 className="text-3xl font-bold">پوشه ها</h2>
       <ul className="mt-12 flex flex-col gap-8">
         <li className="flex items-center gap-4 text-2xl text-slate-500">
