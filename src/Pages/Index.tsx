@@ -94,7 +94,7 @@ const Index: React.FC = () => {
       </div>
       <div className="flex flex-wrap gap-8 mt-20  animate-fade-up">
         <RevenueChart />
-        <div className="flex-1 bg-white rounded-md shadow-lg p-6">
+        <div className="w-full md:flex-1 bg-white rounded-md shadow-lg p-6">
           <div className="flex justify-between items-center">
             <div className="space-y-2">
               <h3 className="text-3xl font-bold">درآمد</h3>
@@ -121,7 +121,7 @@ const Index: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-wrap gap-8 mt-20 animate-fade-up">
-        <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="w-full md:flex-1 bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="p-8 flex justify-between items-start">
             <button
               className="py-2 px-8 text-white rounded-lg"
@@ -139,7 +139,7 @@ const Index: React.FC = () => {
           </div>
           <img src="/img/shape1.png" alt="" />
         </div>
-        <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="w-full md:flex-1 bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="p-8 flex justify-between items-start">
             <button
               className="py-2 px-8 text-white rounded-lg"
@@ -157,7 +157,7 @@ const Index: React.FC = () => {
           </div>
           <img src="/img/shape2.png" alt="" />
         </div>
-        <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="w-full md:flex-1 bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="p-8 flex justify-between items-start">
             <button
               className="py-2 px-8 text-white rounded-lg"
@@ -177,7 +177,7 @@ const Index: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-wrap gap-8 mt-20 animate-fade-up">
-        <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center">
+        <div className="w-full md:flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center">
           <h2 className="text-4xl font-bold">ساعت اپل</h2>
           <img src="/img/watch.png" alt="" />
           <div className="">
@@ -196,7 +196,7 @@ const Index: React.FC = () => {
             999 تومان
           </button>
         </div>
-        <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center">
+        <div className="w-full md:flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center">
           <h2 className="text-4xl font-bold">آهنگ</h2>
           <img src="/img/headphone.png" className="my-8" alt="" />
           <div className="">
@@ -220,7 +220,7 @@ const Index: React.FC = () => {
             399 تومان
           </button>
         </div>
-        <div className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center">
+        <div className="w-full md:flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center">
           <h2 className="text-4xl font-bold">آیفون</h2>
           <img src="/img/phone.png" alt="" />
           <div className="">
@@ -242,7 +242,7 @@ const Index: React.FC = () => {
       </div>
       <div className="flex flex-wrap gap-8 mt-20 animate-fade-up">
         <div
-          className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
+          className="w-full md:flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
           style={{
             background: "linear-gradient(-45deg, #0288d1, #26c6da)",
           }}
@@ -252,7 +252,7 @@ const Index: React.FC = () => {
           <p>در ساعت اپل</p>
         </div>
         <div
-          className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
+          className="w-full md:flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
           style={{
             background: "linear-gradient(-45deg, #ff5252, #f48fb1)",
           }}
@@ -262,7 +262,7 @@ const Index: React.FC = () => {
           <p>در چاپگر کانن</p>
         </div>
         <div
-          className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
+          className="w-full md:flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
           style={{
             background: "linear-gradient(-45deg, #ff6f00, #ffca28)",
           }}
@@ -272,7 +272,7 @@ const Index: React.FC = () => {
           <p>در مک بوک اپل</p>
         </div>
         <div
-          className="flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
+          className="w-full md:flex-1 bg-white shadow-lg rounded-lg overflow-hidden p-8 flex flex-col justify-center items-center gap-8 text-center text-white"
           style={{
             background: "linear-gradient(-45deg, #43a047, #1de9b6)",
           }}
