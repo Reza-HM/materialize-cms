@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const ProductBox: FC = () => {
   return (
-    <div className="w-full flex-1 relative flex flex-col gap-8 bg-white p-8 rounded-lg shadow-lg overflow-hidden animate-fade-up">
+    <div className="w-full relative flex flex-col gap-8 bg-white p-8 rounded-lg shadow-lg overflow-hidden animate-fade-up">
       <div
         className="absolute top-4 left-[-10rem] text-white text-xl flex justify-center items-center text-center w-[25rem] h-[2em] -rotate-45"
         style={{

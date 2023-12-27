@@ -7,9 +7,9 @@ interface BreadCrumbProps {
 
 const BreadCrumb: FC<BreadCrumbProps> = ({ title }) => {
   return (
-    <div className="flex items-center justify-between bg-[url('/img/breadcrumb-bg.jpg')] bg-center bg-cover p-10">
+    <div className="flex flex-wrap items-center justify-between bg-[url('/img/breadcrumb-bg.jpg')] bg-center bg-cover p-10">
       <h2 className="text-3xl font-bold text-white">{title}</h2>
-      <div className="flex items-center gap-4 text-slate-300">
+      <div className="flex flex-wrap items-center gap-4 mt-4 text-slate-300">
         <p>خانه</p>
         <FaAngleLeft />
         <p>برنامه‌ها</p>

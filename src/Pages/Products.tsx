@@ -11,7 +11,7 @@ const Products: FC = () => {
       <div className="mt-4 flex gap-8 p-8">
         <ProductsSidebar />
         <div className="flex-[3]">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-8">
             <ProductBox />
             <ProductBox />
             <ProductBox />
@@ -22,7 +22,7 @@ const Products: FC = () => {
             <ProductBox />
             <ProductBox />
           </div>
-          <div className="relative flex gap-8 bg-white text-slate-400 p-8 rounded-lg shadow-lg overflow-hidden mt-12 animate-fade-up">
+          <div className="relative flex flex-wrap gap-8 bg-white text-slate-400 p-8 rounded-lg shadow-lg overflow-hidden mt-12 animate-fade-up">
             <div
               className="absolute top-4 left-[-10rem] text-white text-xl flex justify-center items-center text-center w-[25rem] h-[2em] -rotate-45"
               style={{
@@ -31,10 +31,10 @@ const Products: FC = () => {
             >
               موجود
             </div>
-            <div className="flex-1">
+            <div className="xs:flex-1">
               <img src="/img/remote.png" alt="" />
             </div>
-            <div className="flex-1">
+            <div className="xs:flex-1">
               <div className="flex flex-col gap-6 p-4">
                 <p>پاوربانک</p>
                 <h2 className="text-black text-4xl">دسته بازی</h2>

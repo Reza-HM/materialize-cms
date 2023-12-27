@@ -4,7 +4,7 @@ import PriceRangeSlider from "./PriceRangeSlider";
 
 const ProductsSidebar: FC = () => {
   return (
-    <div className="flex-1 bg-white shadow-lg p-8 rounded-lg animate-fade-left">
+    <div className="hidden lg:block lg:flex-1 bg-white shadow-lg p-8 rounded-lg animate-fade-left">
       <h2 className="text-3xl text-slate-500">دسته‌بندی</h2>
       <span className="block h-px w-full bg-slate-300 mt-6"></span>
       <ul className="mt-16 flex flex-col gap-8 text-slate-400">
