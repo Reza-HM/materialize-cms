@@ -10,7 +10,7 @@ const Files: FC = () => {
     <div className="mt-12 p-8">
       <div className="flex bg-white shadow-lg rounded-lg border border-slate-200">
         <FilesSidebar />
-        <div className="flex-[4]">
+        <div className="lg:flex-[4] w-full flex-1">
           <div className="flex justify-between items-center border-b p-6">
             <div className="flex relative items-center gap-8 text-slate-500 text-3xl w-full">
               <FaSearch className="cursor-pointer" />
@@ -31,7 +31,7 @@ const Files: FC = () => {
             <p className="text-xl text-slate-400 font-bold">
               فایلی که اخیراً به آن دسترسی پیدا کرده است
             </p>
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-8">
               <FileBox />
               <FileBox />
               <FileBox />
@@ -40,7 +40,7 @@ const Files: FC = () => {
           </div>
           <div className="mt-8 p-6">
             <p className="text-xl font-bold text-slate-400">پوشه</p>
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-8">
               <FolderBox />
               <FolderBox />
               <FolderBox />
@@ -53,7 +53,7 @@ const Files: FC = () => {
           </div>
           <div className="mt-8 p-6">
             <p className="text-xl text-slate-400 font-bold">فایل ها</p>
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-8">
               <FileBox />
               <FileBox />
               <FileBox />

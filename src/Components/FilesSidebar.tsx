@@ -9,7 +9,7 @@ import { FaPlus } from "react-icons/fa";
 
 const FilesSidebar: FC = () => {
   return (
-    <div className="flex-1 p-8 animate-fade-left border-l">
+    <div className="hidden lg:block lg:flex-1 p-8 animate-fade-left border-l">
       <div className="py-4 px-8 bg-blue-600 text-white rounded-lg shadow-lg flex justify-center items-center gap-4 text-2xl font-bold cursor-pointer hover:bg-blue-700 transition-all duration-300">
         <FaPlus />
         افزودن فایل
