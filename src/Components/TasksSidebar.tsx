@@ -5,7 +5,7 @@ import { RiErrorWarningLine } from "react-icons/ri";
 
 const TasksSidebar: FC = () => {
   return (
-    <div className="lg:flex-1 lg:block hidden animate-fade-left">
+    <div className="md:flex-1 md:block hidden animate-fade-left">
       <div className="flex items-center gap-4 text-2xl text-slate-500">
         <MdEmail />
         همه

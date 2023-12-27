@@ -11,7 +11,7 @@ import TasksSidebar from "../Components/TasksSidebar";
 const Tasks: FC = () => {
   return (
     <div className="">
-      <div className="p-8 bg-gray-300/40 hidden lg:block">
+      <div className="p-8 bg-gray-300/40 hidden md:block">
         <div className="flex justify-between items-center mt-20">
           <div className="flex-1 flex items-center gap-4">
             <IoIosCheckbox className="text-4xl font-bold" />
@@ -39,7 +39,7 @@ const Tasks: FC = () => {
       <div className="flex flex-wrap justify-between gap-8 bg-gray-200/30 p-8">
         <TasksSidebar />
 
-        <div className="w-full flex lg:hidden justify-between items-center mt-8">
+        <div className="w-full flex md:hidden justify-between items-center mt-8">
           <div className="flex-1 bg-slate-100 relative">
             <FaSearch className="absolute right-6 top-6 text-slate-500" />
             <input
@@ -49,7 +49,7 @@ const Tasks: FC = () => {
             />
           </div>
         </div>
-        <div className="w-full lg:flex-[4] bg-white shadow-lg rounded-lg lg:-translate-y-32 lg:h-[440px] overflow-y-scroll">
+        <div className="w-full md:flex-[4] bg-white shadow-lg rounded-lg md:-translate-y-32 md:h-[440px] overflow-y-scroll">
           <div className="flex justify-between items-center p-8">
             <MdCheckBoxOutlineBlank className="text-3xl font-bold text-slate-500" />
             <div className="flex items-center gap-8 text-3xl font-bold text-slate-500">
