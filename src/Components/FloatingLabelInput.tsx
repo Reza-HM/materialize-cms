@@ -27,7 +27,7 @@ const FloatingLabelInput: React.FC<FloatingLabelInputProps> = ({
   };
 
   return (
-    <div className="flex-grow relative mt-4">
+    <div className="flex-grow w-full relative mt-4">
       <label
         className={`absolute right-2 text-slate-400 transition-all duration-300 ${
           isFocused || inputValue

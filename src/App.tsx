@@ -10,7 +10,7 @@ const App: React.FC = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="flex-[6]">
+      <div className="w-full flex-1 lg:flex-[6]">
         <Header />
         {router}
       </div>

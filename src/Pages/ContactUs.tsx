@@ -14,7 +14,7 @@ const ContactUs = () => {
   return (
     <div className="">
       <div className="flex justify-between items-center bg-gray-200 p-20 pb-0 animate-fade-up">
-        <div className="flex-1 pb-4">
+        <div className="flex-1 hidden lg:block pb-4">
           <div className="text-4xl flex items-center gap-4 text-zinc-700">
             <MdOutlineEmail />
             <h3>تماس با ما</h3>
@@ -29,7 +29,7 @@ const ContactUs = () => {
             <FaInstagram />
           </div>
         </div>
-        <div className="flex-[2] bg-slate-300 flex items-center gap-8 p-20 text-zinc-700 rounded-t-2xl">
+        <div className="flex-1 w-full lg:flex-[2] bg-slate-300 flex items-center gap-8 p-20 text-zinc-700 rounded-t-2xl">
           <MdOutlineEmail className="text-7xl" />
           <h3 className="text-3xl">
             چند جمله در مورد پروژه خود برای ما بنویسید.
@@ -37,8 +37,8 @@ const ContactUs = () => {
         </div>
       </div>
 
-      <div className="p-20 pt-0 flex ">
-        <div className="flex-1 pt-8 animate-fade-left">
+      <div className="p-20 pt-0 flex">
+        <div className="flex-1 pt-8 hidden lg:block animate-fade-left">
           <h1 className="text-4xl text-zinc-800">قدم بعدی چه خواهد بود؟</h1>
           <h4 className="mt-8 text-zinc-600 text-3xl max-w-lg">
             شما یک قدم به ساخت محصول عالی خود نزدیکتر هستید
@@ -62,7 +62,7 @@ const ContactUs = () => {
             </li>
           </ul>
         </div>
-        <div className="flex-[2] animate-fade-right bg-white p-20 rounded-b-2xl shadow-lgtext-slate-500">
+        <div className="lg:flex-[2] flex-1 animate-fade-right bg-white p-20 rounded-b-2xl shadow-lg text-slate-500 ">
           <form action="" className="flex flex-wrap items-center gap-8">
             <FloatingLabelInput label="نام شما" type="text" />
             <FloatingLabelInput label="ایمیل شما" type="text" />
