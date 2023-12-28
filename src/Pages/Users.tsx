@@ -5,17 +5,17 @@ import { FaPen } from "react-icons/fa";
 
 const Users = () => {
   const [isUserFirstFilterMenuOpened, setIsUserFirstFilterMenuOpened] =
-    useState(false);
+    useState<boolean>(false);
   const [isUserSecondFilterMenuOpened, setIsUserSecondFilterMenuOpened] =
-    useState(false);
+    useState<boolean>(false);
   const [isUserThirdFilterMenuOpened, setIsUserThirdFilterMenuOpened] =
-    useState(false);
+    useState<boolean>(false);
 
   return (
     <div className="mt-12 p-8">
-      <div className="bg-white shadow-lg flex items-center gap-8 rounded-lg p-16 animate-fade-up">
+      <div className="bg-white shadow-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center gap-4 md:gap-8 rounded-lg p-8 animate-fade-up">
         <div
-          className="flex-1 cursor-pointer relative"
+          className="!text-lg sm:!text-xl md:!text-2xl cursor-pointer relative"
           onClick={() => {
             setIsUserFirstFilterMenuOpened(!isUserFirstFilterMenuOpened);
             setIsUserSecondFilterMenuOpened(false);
@@ -51,7 +51,7 @@ const Users = () => {
           )}
         </div>
         <div
-          className="flex-1 cursor-pointer relative"
+          className="!text-lg sm:!text-xl md:!text-2xl cursor-pointer relative"
           onClick={() => {
             setIsUserSecondFilterMenuOpened(!isUserSecondFilterMenuOpened);
             setIsUserFirstFilterMenuOpened(false);
@@ -87,7 +87,7 @@ const Users = () => {
           )}
         </div>
         <div
-          className="flex-1 cursor-pointer relative"
+          className="!text-lg sm:!text-xl md:!text-2xl cursor-pointer relative"
           onClick={() => {
             setIsUserThirdFilterMenuOpened(!isUserThirdFilterMenuOpened);
             setIsUserSecondFilterMenuOpened(false);
@@ -128,26 +128,26 @@ const Users = () => {
             </ul>
           )}
         </div>
-        <div className="flex-1 !bg-blue-800 text-center text-white py-2 px-8 rounded-lg shadow-lg wave-element">
+        <div className=" !bg-blue-800 !text-lg sm:!text-xl md:!text-2xl text-center text-white py-2 px-8 rounded-lg shadow-lg wave-element">
           نمایش
         </div>
       </div>
-      <div className="p-8 mt-8 bg-white shadow-lg rounded-lg animate-fade-up">
-        <div className="flex items-center justify-between my-8">
-          <div className="flex items-center gap-4">
+      <div className="p-4 mt-4 md:mt-8 bg-white shadow-lg rounded-lg animate-fade-up overflow-x-auto">
+        <div className="flex flex-col md:flex-row items-center gap-8 justify-between my-4 md:my-8">
+          <div className="flex items-center gap-2 md:gap-4">
             <p className="text-slate-500">جستجو:</p>
             <input
               type="text"
-              className="border-b-4 rounded-md border-slate-400 text-2xl pb-2 text-slate-400 focus:border-blue-400 transition-[border-color] duration-300 ease-linear"
+              className="border-b-2 md:border-b-4 rounded-md border-slate-400 text-lg md:text-2xl pb-2 md:pb-3 text-slate-400 focus:border-blue-400 transition-[border-color] duration-300 ease-linear"
               placeholder="جستجوی کاربر..."
             />
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <p className="text-slate-500">نمایش:</p>
             <select
               name=""
               id=""
-              className="bg-slate-300 rounded-md border border-slate-500 cursor-pointer p-1 text-zinc-600"
+              className="bg-slate-300 rounded-md border border-slate-500 cursor-pointer p-1 text-zinc-600 text-base md:text-lg"
             >
               <option value="10">10 </option>
               <option value="20">20</option>
@@ -157,294 +157,41 @@ const Users = () => {
             </select>
           </div>
         </div>
-        <table className=" w-full rounded-2xl overflow-hidden">
-          <thead className="">
-            <tr className="text-center text-slate-500">
-              <th className="p-5">شناسه</th>
-              <th className="p-8">نام کاربری</th>
-              <th className="p-8">نام</th>
-              <th className="p-8">آخرین فعالیت</th>
-              <th className="p-8">تایید شده</th>
-              <th className="p-8">نقش</th>
-              <th className="p-8">وضعیت</th>
-              <th className="p-8">ویرایش</th>
-            </tr>
-          </thead>
-          <tbody className="text-slate-500">
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-            <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-              <td className="p-5 flex items-center justify-center gap-4">
-                <FcPlus className="text-3xl" />
-                331{" "}
-              </td>
-              <td className="p-5 text-blue-400"> madeson1907</td>
-              <td className="p-5">Madeson Byers</td>
-              <td className="p-5">19/07/2020</td>
-              <td className="p-5">بله</td>
-              <td className="">کاربر</td>
-              <td className="p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                فعال{" "}
-              </td>
-              <td className="p-5 flex justify-center items-center mt-2 gap-4">
-                <FaPen className="text-blue-500" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="w-full !min-w-[300px] rounded-2xl overflow-hidden">
+            <thead className="text-lg sm:text-xl md:text-2xl">
+              <tr className="text-center text-slate-500">
+                <th className="p-4 md:p-5">شناسه</th>
+                <th className="p-4 md:p-8">نام کاربری</th>
+                <th className="p-4 md:p-8">نام</th>
+                <th className="p-4 md:p-8">آخرین فعالیت</th>
+                <th className="p-4 md:p-8">تایید شده</th>
+                <th className="p-4 md:p-8">نقش</th>
+                <th className="p-4 md:p-8">وضعیت</th>
+                <th className="p-4 md:p-8">ویرایش</th>
+              </tr>
+            </thead>
+            <tbody className="text-slate-500 text-lg sm:text-xl md:text-2xl">
+              <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
+                <td className="p-4 md:p-5 flex items-center justify-center gap-2 md:gap-4">
+                  <FcPlus className="text-2xl md:text-3xl" />
+                  331{" "}
+                </td>
+                <td className="p-4 md:p-5 text-blue-400"> madeson1907</td>
+                <td className="p-4 md:p-5">Madeson Byers</td>
+                <td className="p-4 md:p-5">19/07/2020</td>
+                <td className="p-4 md:p-5">بله</td>
+                <td className="p-4 md:p-5">کاربر</td>
+                <td className="p-4 md:p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                  فعال{" "}
+                </td>
+                <td className="p-4 md:p-5 flex justify-center items-center mt-2 gap-2 md:gap-4">
+                  <FaPen className="text-blue-500" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
