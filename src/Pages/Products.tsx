@@ -1,10 +1,41 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import BreadCrumb from "../Components/BreadCrumb";
 import ProductsSidebar from "../Components/ProductsSidebar";
 import ProductBox from "../Components/ProductBox";
 import { FaRegHeart } from "react-icons/fa";
 
+interface ProductRating {
+  rate: number;
+  count: number;
+}
+
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: ProductRating;
+}
+
 const Products: FC = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch(`http://localhost:3000/products`);
+        const productsData: Product[] = await res.json();
+        setProducts(productsData);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
     <div>
       <BreadCrumb title="صفحه محصولات تجارت الکترونیکی" />
@@ -12,15 +43,9 @@ const Products: FC = () => {
         <ProductsSidebar />
         <div className="flex-[3]">
           <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-8">
-            <ProductBox />
-            <ProductBox />
-            <ProductBox />
-            <ProductBox />
-            <ProductBox />
-            <ProductBox />
-            <ProductBox />
-            <ProductBox />
-            <ProductBox />
+            {products.map((product) => (
+              <ProductBox {...product} key={product.id} />
+            ))}
           </div>
           <div className="relative flex flex-wrap gap-8 bg-white text-slate-400 p-8 rounded-lg shadow-lg overflow-hidden mt-12 animate-fade-up">
             <div
