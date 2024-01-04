@@ -1,13 +1,14 @@
 import { FC } from "react";
 import { BiLike, BiMessage } from "react-icons/bi";
 
-const BlogGallery: FC = () => {
+interface BlogGalleryProps {
+  body: string;
+}
+
+const BlogGallery: FC<BlogGalleryProps> = ({ body }) => {
   return (
     <div className="bg-[url('/img/blog/iphone.png')] rounded-lg shadow-lg p-12 w-full flex flex-col gap-12 text-white text-2xl animate-fade-up">
-      <h4>
-        عکاسی ماکرو مادون قرمز عمق سبز را در مجموعه ای خیره کننده از گیاهان
-        جزیره قناری باز می کند
-      </h4>
+      <h4>{body}</h4>
       <div className="flex flex-wrap justify-between items-center">
         <p>بیشتر بخوانید</p>
         <div className="flex items-center gap-8">
