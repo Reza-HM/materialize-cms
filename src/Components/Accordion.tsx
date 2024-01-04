@@ -1,7 +1,12 @@
 import { FC, useState } from "react";
 import { FaAngleLeft } from "react-icons/fa";
 
-const Accordion: FC = () => {
+interface AccordionProps {
+  question: string;
+  answer: string;
+}
+
+const Accordion: FC<AccordionProps> = ({ answer, question }) => {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   return (
@@ -10,7 +15,7 @@ const Accordion: FC = () => {
         className="bg-white rounded-lg shadow-lg text-slate-500 text-2xl cursor-pointer flex items-center justify-between p-8"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <p>سوال: آیا عضویت شامل فایل های اصلی PSD می شود؟</p>
+        <p>سوال: {question}</p>
         <FaAngleLeft
           className={`text-3xl transition-transform duration-300 ease-out ${
             isExpanded ? "-rotate-90" : ""
@@ -23,10 +28,7 @@ const Accordion: FC = () => {
         }`}
         style={{ maxHeight: isExpanded ? "1000px" : "0" }}
       >
-        اگر می‌خواهید از قسمتی از Lorem Ipsum استفاده کنید، باید مطمئن شوید که
-        هیچ چیز شرم‌آوری در وسط متن پنهان نشده باشد. همه ژنراتورهای Lorem Ipsum
-        در اینترنت تمایل دارند تا قطعات از پیش تعریف شده را در صورت لزوم تکرار
-        کنند، و این اولین مولد واقعی در اینترنت است.
+        {answer}
       </div>
     </div>
   );

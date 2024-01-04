@@ -1,9 +1,31 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { FaClipboard, FaSearch, FaUser } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
 import Accordion from "../Components/Accordion";
 
+interface Question {
+  id: number;
+  question: string;
+  answer: string;
+}
+
 const Questions: FC = () => {
+  const [questions, setQuestions] = useState<Question[]>([]);
+
+  useEffect(() => {
+    const fetchQuestions = async () => {
+      try {
+        const res = await fetch(`http://localhost:3000/questions`);
+        const questionsData: Question[] = await res.json();
+        setQuestions(questionsData);
+      } catch (error) {
+        console.error("Error fetching questions:", error);
+      }
+    };
+
+    fetchQuestions();
+  }, []);
+
   return (
     <div className="mt-8 p-8">
       <div className="bg-[url('/img/faq-search.jpg')] bg-cover bg-no-repeat p-24 rounded-lg shadow-lg flex flex-col items-center gap-8 animate-fade-up text-center">
@@ -113,9 +135,9 @@ const Questions: FC = () => {
           </div>
         </div>
         <div className="md:flex-[4] flex flex-col gap-4 animate-fade-right">
-          <Accordion /> <Accordion />
-          <Accordion /> <Accordion />
-          <Accordion /> <Accordion />
+          {questions.map((question) => (
+            <Accordion {...question} key={question.id} />
+          ))}
         </div>
       </div>
     </div>
