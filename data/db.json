@@ -347,6 +347,7 @@
     "orders": 1200,
     "profit": 35000.5,
     "sales": 50000,
+    "customers": 2400,
     "newUsers": 200,
     "income": {
       "total": 120000,

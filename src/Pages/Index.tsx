@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaDollarSign } from "react-icons/fa";
 import { FaChartLine } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
@@ -7,7 +7,85 @@ import RevenueChart from "../Components/RevenueChart";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaArrowUp } from "react-icons/fa";
 
+interface InfosType {
+  orders: number;
+  profit: number;
+  sales: number;
+  customers: number;
+  newUsers: number;
+  income: {
+    total: number;
+    weekly: {
+      Sunday: number;
+      Monday: number;
+      Tuesday: number;
+      Wednesday: number;
+      Thursday: number;
+      Friday: number;
+      Saturday: number;
+    };
+    daily: {
+      average: number;
+      highest: {
+        day: string;
+        amount: number;
+      };
+      lowest: {
+        day: string;
+        amount: number;
+      };
+    };
+  };
+  onlineUsers: number;
+}
+
 const Index: React.FC = () => {
+  const [infos, setInfos] = useState<InfosType>({
+    orders: 0,
+    profit: 0,
+    sales: 0,
+    customers: 0,
+    newUsers: 0,
+    income: {
+      total: 0,
+      weekly: {
+        Sunday: 0,
+        Monday: 0,
+        Tuesday: 0,
+        Wednesday: 0,
+        Thursday: 0,
+        Friday: 0,
+        Saturday: 0,
+      },
+      daily: {
+        average: 0,
+        highest: {
+          day: "",
+          amount: 0,
+        },
+        lowest: {
+          day: "",
+          amount: 0,
+        },
+      },
+    },
+    onlineUsers: 0,
+  });
+
+  useEffect(() => {
+    const fetchInfos = async () => {
+      try {
+        const res = await fetch("http://localhost:3000/statistics");
+        const fetchedInfos: InfosType = await res.json();
+        setInfos(fetchedInfos);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchInfos();
+  }, []);
+
   return (
     <div className="p-8">
       <div className="flex flex-wrap justify-between items-center text-white gap-16 animate-fade-up">
@@ -25,7 +103,7 @@ const Index: React.FC = () => {
           </div>
           <div className="flex flex-col gap-8">
             <div className="">
-              <h3 className="text-3xl font-bold">690</h3>
+              <h3 className="text-3xl font-bold">{infos.orders}</h3>
               <p>جدید</p>
             </div>
             <p>6,00,00</p>
@@ -45,7 +123,7 @@ const Index: React.FC = () => {
           </div>
           <div className="flex flex-col gap-8">
             <div className="">
-              <h3 className="text-3xl font-bold">1885</h3>
+              <h3 className="text-3xl font-bold">{infos.customers}</h3>
               <p>جدید</p>
             </div>
             <p>1,12,900</p>
@@ -68,7 +146,7 @@ const Index: React.FC = () => {
               <h3 className="text-3xl font-bold">80%</h3>
               <p>رشد</p>
             </div>
-            <p>3,42,230</p>
+            <p> تومان {infos.sales.toLocaleString()}</p>
           </div>
         </div>
         <div
@@ -85,10 +163,12 @@ const Index: React.FC = () => {
           </div>
           <div className="flex flex-col gap-8">
             <div className="">
-              <h3 className="text-3xl font-bold">890</h3>
+              <h3 className="text-3xl font-bold">
+                {infos.profit.toLocaleString()}
+              </h3>
               <p>تومان امروز</p>
             </div>
-            <p className="truncate">25,000 تومان</p>
+            <p className="truncate">{infos.profit.toLocaleString()} تومان</p>
           </div>
         </div>
       </div>
@@ -103,7 +183,9 @@ const Index: React.FC = () => {
             <BsThreeDotsVertical />
           </div>
           <div className="flex items-center gap-8 justify-start mt-24 mr-4">
-            <h1 className="text-7xl">۸۹۹۰ تومان</h1>
+            <h1 className="text-7xl">
+              {infos.income.weekly.Friday.toLocaleString()} تومان
+            </h1>
             <FaArrowUp className="text-4xl text-orange-500" />
           </div>
           <img src="/img/download.png" className="block mt-12" alt="" />
@@ -134,7 +216,9 @@ const Index: React.FC = () => {
             <div className="">
               <h3 className="text-slate-400 text-xl">کاربران آنلاین</h3>{" "}
               <p className="text-slate-400 text-xl">360 میانگین</p>{" "}
-              <h2 className="text-3xl mt-4 font-bold">3,450</h2>
+              <h2 className="text-3xl mt-4 font-bold">
+                {infos.onlineUsers} نفر
+              </h2>
             </div>
           </div>
           <img src="/img/shape1.png" alt="" />
@@ -169,8 +253,12 @@ const Index: React.FC = () => {
             </button>
             <div className="">
               <h3 className="text-slate-400 text-xl"> درآمد امروز </h3>{" "}
-              <p className="text-slate-400 text-xl">40,512 تومان میانگین</p>{" "}
-              <h2 className="text-3xl mt-4 font-bold">22300 تومان</h2>
+              <p className="text-slate-400 text-xl">
+                {infos.income.daily.average.toLocaleString()} تومان میانگین
+              </p>{" "}
+              <h2 className="text-3xl mt-4 font-bold">
+                {infos.income.weekly.Thursday.toLocaleString()} تومان
+              </h2>
             </div>
           </div>
           <img src="/img/shape3.png" alt="" />
