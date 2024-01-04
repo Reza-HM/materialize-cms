@@ -9,8 +9,74 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import FloatingLabelInput from "../Components/FloatingLabelInput";
 import FloatingLabelTextarea from "../Components/FloatingLabelTextArea";
+import { ChangeEvent, FormEvent, useState } from "react";
+import swal from "sweetalert";
 
 const ContactUs = () => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [company, setCompany] = useState<string>("");
+  const [budget, setBudget] = useState<string>("");
+  const [description, setDescription] = useState<string>("");
+
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) =>
+    setName(e.target.value);
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) =>
+    setEmail(e.target.value);
+  const handleCompanyChange = (e: ChangeEvent<HTMLInputElement>) =>
+    setCompany(e.target.value);
+  const handleBudgetChange = (e: ChangeEvent<HTMLInputElement>) =>
+    setBudget(e.target.value);
+  const handleDescriptionChange = (e: ChangeEvent<HTMLTextAreaElement>) =>
+    setDescription(e.target.value);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("http://localhost:3000/contacts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          company,
+          budget,
+          description,
+        }),
+      });
+
+      const results = await res.json();
+
+      if (res.ok) {
+        console.log(results);
+        swal({
+          title: "پیام شما با موفقیت ارسال شد.",
+          icon: "success",
+          buttons: ["OK", "بستن"],
+        });
+      } else {
+        // Handle error case
+        console.error("Error:", results);
+        swal({
+          title: "خطا در ارسال پیام!",
+          text: "لطفاً دوباره تلاش کنید.",
+          icon: "error",
+          buttons: ["OK", "بستن"],
+        });
+      }
+    } catch (error) {
+      // Handle fetch error
+      console.error("Fetch error:", error);
+      swal({
+        title: "خطا در ارسال پیام!",
+        text: "لطفاً دوباره تلاش کنید.",
+        icon: "error",
+        buttons: ["OK", "بستن"],
+      });
+    }
+  };
+
   return (
     <div className="">
       <div className="flex justify-between items-center bg-gray-200 p-20 pb-0 animate-fade-up">
@@ -63,12 +129,39 @@ const ContactUs = () => {
           </ul>
         </div>
         <div className="lg:flex-[2] flex-1 animate-fade-right bg-white p-20 rounded-b-2xl shadow-lg text-slate-500 ">
-          <form action="" className="flex flex-wrap items-center gap-8">
-            <FloatingLabelInput label="نام شما" type="text" />
-            <FloatingLabelInput label="ایمیل شما" type="text" />
-            <FloatingLabelInput label="شرکت" type="text" />
-            <FloatingLabelInput label="بودجه برنامه" type="text" />
-            <FloatingLabelTextarea label="توضیحات" />
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-wrap items-center gap-8"
+          >
+            <FloatingLabelInput
+              label="نام شما"
+              type="text"
+              value={name}
+              onChange={handleNameChange}
+            />
+            <FloatingLabelInput
+              label="ایمیل شما"
+              type="text"
+              value={email}
+              onChange={handleEmailChange}
+            />
+            <FloatingLabelInput
+              label="شرکت"
+              type="text"
+              value={company}
+              onChange={handleCompanyChange}
+            />
+            <FloatingLabelInput
+              label="بودجه برنامه"
+              type="text"
+              value={budget}
+              onChange={handleBudgetChange}
+            />
+            <FloatingLabelTextarea
+              label="توضیحات"
+              value={description}
+              onChange={handleDescriptionChange}
+            />
             <button className="!bg-blue-500 !hover:bg-blue-600 text-white px-8 py-2 wave-element w-full rounded-md">
               ارسال
             </button>
