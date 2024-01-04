@@ -1,7 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { FcPlus } from "react-icons/fc";
 import { FaPen } from "react-icons/fa";
+
+interface User {
+  id: number;
+  email: string;
+  username: string;
+  password: string;
+  name: {
+    firstname: string;
+    lastname: string;
+  };
+  phone: string;
+  address: {
+    geolocation: {
+      lat: string;
+      long: string;
+    };
+    city: string;
+    street: string;
+    number: number;
+    zipcode: string;
+  };
+  __v: number;
+}
 
 const Users = () => {
   const [isUserFirstFilterMenuOpened, setIsUserFirstFilterMenuOpened] =
@@ -10,6 +33,21 @@ const Users = () => {
     useState<boolean>(false);
   const [isUserThirdFilterMenuOpened, setIsUserThirdFilterMenuOpened] =
     useState<boolean>(false);
+  const [users, setUsers] = useState<User[]>([]);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const res = await fetch(`http://localhost:3000/users`);
+        const productsData: User[] = await res.json();
+        setUsers(productsData);
+      } catch (error) {
+        console.error("Error fetching users:", error);
+      }
+    };
+
+    fetchUsers();
+  }, []);
 
   return (
     <div className="mt-12 p-8">
@@ -164,31 +202,38 @@ const Users = () => {
                 <th className="p-4 md:p-5">شناسه</th>
                 <th className="p-4 md:p-8">نام کاربری</th>
                 <th className="p-4 md:p-8">نام</th>
-                <th className="p-4 md:p-8">آخرین فعالیت</th>
-                <th className="p-4 md:p-8">تایید شده</th>
+                <th className="p-4 md:p-8">تلفن</th>
+                <th className="p-4 md:p-8">محل زندگی</th>
                 <th className="p-4 md:p-8">نقش</th>
                 <th className="p-4 md:p-8">وضعیت</th>
                 <th className="p-4 md:p-8">ویرایش</th>
               </tr>
             </thead>
             <tbody className="text-slate-500 text-lg sm:text-xl md:text-2xl">
-              <tr className="text-center bg-gray-50 even:bg-white odd:bg-gray-100">
-                <td className="p-4 md:p-5 flex items-center justify-center gap-2 md:gap-4">
-                  <FcPlus className="text-2xl md:text-3xl" />
-                  331{" "}
-                </td>
-                <td className="p-4 md:p-5 text-blue-400"> madeson1907</td>
-                <td className="p-4 md:p-5">Madeson Byers</td>
-                <td className="p-4 md:p-5">19/07/2020</td>
-                <td className="p-4 md:p-5">بله</td>
-                <td className="p-4 md:p-5">کاربر</td>
-                <td className="p-4 md:p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
-                  فعال{" "}
-                </td>
-                <td className="p-4 md:p-5 flex justify-center items-center mt-2 gap-2 md:gap-4">
-                  <FaPen className="text-blue-500" />
-                </td>
-              </tr>
+              {users.map((user) => (
+                <tr
+                  className="text-center bg-gray-50 even:bg-white odd:bg-gray-100"
+                  key={user.id}
+                >
+                  <td className="p-4 md:p-5 flex items-center justify-center gap-2 md:gap-4">
+                    <FcPlus className="text-2xl md:text-3xl" />
+                    331{" "}
+                  </td>
+                  <td className="p-4 md:p-5 text-blue-400"> {user.username}</td>
+                  <td className="p-4 md:p-5">
+                    {user.name.firstname} {user.name.lastname}
+                  </td>
+                  <td className="p-4 md:p-5">{user.phone}</td>
+                  <td className="p-4 md:p-5">{user.address.city}</td>
+                  <td className="p-4 md:p-5">کاربر</td>
+                  <td className="p-4 md:p-5 bg-green-500/20 text-green-500 font-bold rounded-lg">
+                    فعال{" "}
+                  </td>
+                  <td className="p-4 md:p-5 flex justify-center items-center mt-2 gap-2 md:gap-4">
+                    <FaPen className="text-blue-500" />
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
