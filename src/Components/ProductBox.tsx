@@ -1,6 +1,13 @@
 import { FC } from "react";
 
-const ProductBox: FC = () => {
+interface ProductBoxProps {
+  category: string;
+  title: string;
+  image: string;
+  price: number;
+}
+
+const ProductBox: FC<ProductBoxProps> = ({ category, title, image, price }) => {
   return (
     <div className="w-full relative flex flex-col gap-8 bg-white p-8 rounded-lg shadow-lg overflow-hidden animate-fade-up">
       <div
@@ -12,15 +19,13 @@ const ProductBox: FC = () => {
         موجود
       </div>
       <div className="">
-        <p className="text-slate-400">ساعت های هوشمند</p>
-        <h3 className="text-slate-600 text-3xl mt-2">
-          ساعت هوشمند 2.0 LTE Wifi
-        </h3>
+        <p className="text-slate-400">{category}</p>
+        <h3 className="text-slate-600 text-3xl mt-2 line-clamp-2">{title}</h3>
       </div>
-      <img src="/img/watch-2.png" alt="" />
+      <img src={image} className="w-[200px] h-[200px] mx-auto" alt="" />
       <div className="">
         <h3 className="text-slate-400 text-center mb-4 text-3xl font-bold">
-          399 تومان
+          {price} تومان
         </h3>
         <button className="bg-blue-600 py-2 rounded-lg text-white w-full shadow-xl shadow-zinc-500 hover:shadow-sm transition-all duration-300">
           نمایش
@@ -29,4 +34,5 @@ const ProductBox: FC = () => {
     </div>
   );
 };
+
 export default ProductBox;
