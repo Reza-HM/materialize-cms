@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend": "json-server -w data/db.json",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Reza HM",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.21"
+  }
+}
